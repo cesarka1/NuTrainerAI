@@ -1,0 +1,104 @@
+/* styles.css */
+
+/* Importa a fonte Chakra Petch do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* Estiliza o corpo da página */
+body {
+    font-family: "Chakra Petch", sans-serif;
+    background-color: #dbf3eb; /* Cor de fundo */
+    margin: 0;
+    padding: 0;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px; /* Aumentado para melhor espaçamento */
+    background-color: #30475E;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Estiliza a seção principal */
+.main-content {
+    margin-left: 240px; /* Ajustado para o novo tamanho da sidebar */
+    padding: 20px;
+}
+
+/* Adicionando espaçamento entre a sidebar e os componentes */
+.main-content > header,
+.main-content > main,
+.main-content > footer {
+    margin-left: 20px; /* Espaço entre a sidebar e os componentes */
+}
+
+/* Estiliza os títulos h1 */
+h1 {
+    font-size: 2.5rem;
+    color: #222831;
+    text-align: center;
+}
+
+/* Estiliza os inputs e botões */
+input[type="text"], input[type="number"], select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px; /* Aumentado para mais espaço */
+    border: 1px solid #ced4da; /* Borda padrão */
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #30475E; /* Cor do botão */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px; /* Espaço acima do botão */
+}
+
+button:hover {
+    background-color: #222831; /* Cor ao passar o mouse */
+}
+
+.results {
+    margin-top: 20px;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #45474B;
+    padding: 10px 0; /* Espaço no topo e na base do rodapé */
+}
+
+/* Estilo para os campos 2x2 */
+.fields-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    gap: 20px; /* Espaçamento entre os campos */
+    margin-bottom: 20px; /* Espaço abaixo da grade */
+}
