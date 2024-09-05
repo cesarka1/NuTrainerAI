@@ -24,8 +24,13 @@ Disponivel em: https://cesarka1.github.io/NuTrainAI/
 ![alt text](images/exercicio.png)
 
 - **Fichas de Treino:** Fichas de treino organizadas por níveis de dificuldade.
+![alt text](images/fichatreino.png)
+![alt text](images/Fichatreinomodal.png)
+
 - **Sugestões de Dieta:** Planos de dieta adaptados aos objetivos do usuário.
-- **Consultoria Personalizada:** Interação com a inteligência do Gemini para tirar dúvidas e oferecer recomendações personalizadas.
+![alt text](images/dietas.png)
+- **Consultoria Personalizada:** Interação com a inteligência do Gemini para tirar dúvidas e oferecer recomendações personalizadas.(Ainda não está funcionado)
+![alt text](images/Consulta.png)
 
 
 
@@ -41,6 +46,9 @@ Após a fase inicial, quando a ideia começou a ganhar forma e a primeira tela e
 Felizmente, após muitas horas ajustando CSS, HTML e adicionando uma pitada de JavaScript para garantir que tudo funcionasse corretamente, consegui implementar essa estrutura com sucesso.
 
 No entanto, ao chegar a esse ponto, refleti: "Se este é um sistema de consulta de treinos, exercícios e dietas, ninguém vai acessá-lo com frequência pelo PC." 🤔 Foi então que percebi a necessidade de desenvolver uma interface responsiva. Iniciei uma intensa jornada, ao ponto de precisar virar a noite (não façam isso crianças, isso não é saudavel kkkkk) , para garantir que o site fosse eficiente e adaptável a dispositivos móveis, permitindo consultas rápidas de exercícios e visualizações das execuções em qualquer lugar.
+
+![alt text](images/Responsividade.png)
+
 
 Chegou ao ponto de eu estar tão imerso no projeto que como dizem no meio fitnes eu fui até a falha, mas nesse caso do meu notebook, que enquanto eu codava e tava com mil abas abertas, falhou e deu tela azul KKKKKKKK 😅
 
