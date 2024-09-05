@@ -17,7 +17,7 @@ function gerarResultados(resultados) {
     let resultadosHTML = '';
 
     resultados.forEach(item => {
-        if (window.location.pathname === "/views/treinos.html") {
+        if (window.location.pathname === "NuTrainerAI/views/treinos.html") {
             resultadosHTML += criarElementoResultado(
                 item.Titulo,
                 item.Descricao,
@@ -112,7 +112,7 @@ function pesquisar() {
     let resultadosFiltrados = [];
 
     // Verifica se estamos na página de treinos
-    if (window.location.pathname === "/views/treinos.html") {
+    if (window.location.pathname === "NuTrainerAI/views/treinos.html") {
         resultadosFiltrados = treinos.filter(treino => 
             treino.Titulo.toLowerCase().includes(input) ||
             treino.Descricao.toLowerCase().includes(input) ||
