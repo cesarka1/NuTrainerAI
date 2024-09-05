@@ -3,37 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dicas Gerais - NuTrainerAi</title>
+    <title>Exercícios - NuTrainerAi</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <div class="sidebar">
         <h2>Menu</h2>
-        <ul>
+        <ul class="slidebar-items">
             <li><a href="index.html">Sobre</a></li>
-            <li><a href="dicas.html">Treinos & Dietas</a></li>
-            <li><a href="consulta.html">Consulta com o NuTrainerAi</a></li>
+            <li><a href="exercicios.html">Exercícios</a></li>
+            <li><a href="treinos.html">Treinos</a></li>
+            <li><a href="dietas.html">Dietas</a></li>
+            <li><a href="consulta.html">NuTrainerAi</a></li>
             <li><a href="help.html">Ajuda</a></li>
         </ul>
     </div>
 
     <div class="main-content">
         <header>
-            <h1>Treinos & Dietas</h1>
+            <h1>Exercícios</h1>
         </header>
         <main>
-            <section>
-                <h2>Pesquise por treinos ou dietas</h2>
-                <input type="text" placeholder="Busque por um treino ou por uma dieta">
-                <button>Pesquisar</button>
+            <section >
+                <h2>Pesquise por exercícios</h2>
+                <div class="search-container">
+                    <input type="text" placeholder="Busque por um exercício">
+                    <button onclick="pesquisar()" >Pesquisar</button>
+                </div>
                 <p></p>
             </section>
-            <section class="resultados-pesquisa" id="resultados">
-               
+            <div class="resultados-pesquisa flex-container" id="resultados-exercicios">
             </section>                
         </main>
-        <div id="myModal" class="modal">
+        <div id="myModal" class="modal item-resultado">
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <h2 id="modalTitulo"></h2>
@@ -42,14 +45,11 @@
         </div>
         <footer>
             <p>2024 - NuTrainerAi. Todos os direitos reservados</p>
-            <p>Entre em contato pelo email: contato@nutrainerai.com</p>
+            <p>Entre em contato pelo email: cesarkauan.jobs@hotmail.com</p>
         </footer>
     </div>
 
- 
-    
     <script src="../js/dados.js"></script>
-    <script src="../js/app.js"></script>
-    
+    <script src="../js/exercicios.js"></script>
 </body>
 </html>

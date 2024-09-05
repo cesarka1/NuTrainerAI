@@ -1,3 +1,309 @@
+let exercicios = [
+        // Exercícios de Peito
+        {
+            Nome: "Supino Reto com Barra",
+            Equipamento: "Barra e Halteres",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2019/08/developpe-couche.gif",
+            MusculoTrabalhado: "Peito",
+            Descricao: "Exercício composto que trabalha o peitoral, ombros e tríceps, realizado em um banco plano com a barra."
+        },
+        {
+            Nome: "Supino Inclinado com Halteres",
+            Equipamento: "Halteres",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2000/06/developpe-incline-halteres-exercice-musculation.gif",
+            MusculoTrabalhado: "Peito",
+            Descricao: "Trabalha a parte superior do peitoral, proporcionando maior envolvimento dos deltoides frontais."
+        },
+        {
+            Nome: "Flexões",
+            Equipamento: "Peso Corporal",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2020/10/pompe-musculation.gif",
+            MusculoTrabalhado: "Peito",
+            Descricao: "Exercício de peso corporal que fortalece o peitoral, ombros e tríceps, mantendo o corpo reto."
+        },
+        {
+            Nome: "Peck Deck",
+            Equipamento: "Máquina",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2000/06/pec-deck-butterfly-exercice-musculation.gif",
+            MusculoTrabalhado: "Peito",
+            Descricao: "Exercício de isolamento realizado em máquina para maximizar a contração do músculo peitoral."
+        },
+        {
+            Nome: "Crossover",
+            Equipamento: "Cabos",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2000/06/ecarte-poulie-vis-a-vis-exercice-musculation-pectoraux.gif",
+            MusculoTrabalhado: "Peito",
+            Descricao: "Movimento de adução do peitoral realizado com polias para definição e fortalecimento."
+        },
+        {
+            Nome: "Crucifixo Inclinado com Halteres",
+            Equipamento: "Halteres",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2022/09/ecartes-incline-avec-halteres.gif",
+            MusculoTrabalhado: "Peito",
+            Descricao: "Isolamento do peitoral superior com halteres, aumentando a amplitude de movimento e alongamento."
+        },
+        {
+            Nome: "Supino Declinado com Barra",
+            Equipamento: "Barra",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2021/12/developpe-decline-barre.gif",
+            MusculoTrabalhado: "Peito",
+            Descricao: "Focado na parte inferior do peitoral, realizado em um banco declinado para maximizar o trabalho dessa região."
+        },
+        {
+            Nome: "Crucifixo com Cabos",
+            Equipamento: "Cabos",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2022/04/ecartes-poulie-vis-a-vis.gif",
+            MusculoTrabalhado: "Peito",
+            Descricao: "Exercício de isolamento realizado em pé com polias, promovendo uma contração muscular intensa do peitoral."
+        },
+        {
+            Nome: "Peck Deck com Dropset",
+            Equipamento: "Máquina",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2000/06/pec-deck-butterfly-exercice-musculation.gif",
+            MusculoTrabalhado: "Peito",
+            Descricao: "Versão avançada do Peck Deck utilizando dropsets para aumentar a intensidade e hipertrofia muscular."
+        },
+    
+        // Exercícios de Pernas
+        {
+            Nome: "Agachamento Livre",
+            Equipamento: "Barra",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2022/08/air-squat.gif",
+            MusculoTrabalhado: "Pernas",
+            Descricao: "Exercício multiarticular que trabalha quadríceps, glúteos e posteriores de coxa, essencial para força e volume muscular."
+        },
+        {
+            Nome: "Leg Press 45º",
+            Equipamento: "Máquina",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2022/08/presse-a-cuisses-inclinee.gif",
+            MusculoTrabalhado: "Pernas",
+            Descricao: "Exercício em máquina que foca nos quadríceps, glúteos e posterior de coxa, com variação de carga."
+        },
+        {
+            Nome: "Cadeira Extensora",
+            Equipamento: "Máquina",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2000/06/leg-extension-exercice-musculation.gif",
+            MusculoTrabalhado: "Quadríceps",
+            Descricao: "Isolamento dos quadríceps, proporcionando máxima ativação durante a extensão dos joelhos."
+        },
+        {
+            Nome: "Cadeira Flexora",
+            Equipamento: "Máquina",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2022/02/leg-curl-assis-machine.gif",
+            MusculoTrabalhado: "Posterior de Coxa",
+            Descricao: "Trabalha de forma isolada os músculos posteriores da coxa, ideal para definição e força."
+        },
+        {
+            Nome: "Elevação de Panturrilha",
+            Equipamento: "Peso Corporal",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2021/10/extension-mollets-sur-marche.gif",
+            MusculoTrabalhado: "Panturrilha",
+            Descricao: "Fortalece os músculos da panturrilha, realizado em pé ou sentado, com peso corporal ou carga adicional."
+        },
+        {
+            Nome: "Agachamento Livre com Peso",
+            Equipamento: "Barra",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2021/11/homme-faisant-un-squat-avec-barre.gif",
+            MusculoTrabalhado: "Pernas",
+            Descricao: "Versão avançada do agachamento, adicionando carga para aumentar a resistência e intensidade."
+        },
+        {
+            Nome: "Leg Press com Dropset",
+            Equipamento: "Máquina",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2022/08/presse-a-cuisses-inclinee.gif",
+            MusculoTrabalhado: "Pernas",
+            Descricao: "Leg press utilizando a técnica de dropset para maximizar o trabalho dos músculos das pernas."
+        },
+        {
+            Nome: "Cadeira Extensora com Isometria",
+            Equipamento: "Máquina",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2000/06/leg-extension-exercice-musculation.gif",
+            MusculoTrabalhado: "Quadríceps",
+            Descricao: "Inclui uma pausa isométrica durante a extensão, aumentando a resistência e força muscular nos quadríceps."
+        },
+        {
+            Nome: "Cadeira Flexora com Isometria",
+            Equipamento: "Máquina",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2022/02/leg-curl-assis-machine.gif",
+            MusculoTrabalhado: "Posterior de Coxa",
+            Descricao: "Exercício com pausa isométrica para aumentar a intensidade e trabalho dos músculos posteriores da coxa."
+        },
+    
+        // Exercícios de Costas
+        {
+            Nome: "Levantamento Terra com Barra",
+            Equipamento: "Barra",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2021/12/souleve-de-terre.gif",
+            MusculoTrabalhado: "Dorsais",
+            Descricao: "Exercício composto que trabalha todo o corpo, especialmente a região lombar, glúteos e posteriores da coxa."
+        },
+        {
+            Nome: "Puxada Aberta com Barra",
+            Equipamento: "Barra",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2021/11/tirage-vertical-poitrine.gif",
+            MusculoTrabalhado: "Costas",
+            Descricao: "Foca no aumento da largura das costas, principalmente o grande dorsal, com pegada aberta."
+        },
+        {
+            Nome: "Remada Curvada com Barra",
+            Equipamento: "Barra",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2021/09/rowing-barre.gif",
+            MusculoTrabalhado: "Costas",
+            Descricao: "Exercício que trabalha toda a musculatura das costas, enfatizando os músculos da parte superior e média."
+        },
+        {
+            Nome: "Remada Unilateral com Halteres",
+            Equipamento: "Halteres",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2021/08/rowing-haltere-un-bras.gif",
+            MusculoTrabalhado: "Costas",
+            Descricao: "Foca no trabalho unilateral dos músculos dorsais, ajudando na simetria e fortalecimento muscular."
+        },
+        {
+            Nome: "Pulldown com Triângulo",
+            Equipamento: "Máquina",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2021/08/tirage-vertical-prise-serree.gif",
+            MusculoTrabalhado: "Costas",
+            Descricao: "Exercício realizado em máquina para fortalecer os músculos das costas com pegada neutra."
+        },
+    
+        // Exercícios de Ombros
+        {
+            Nome: "Desenvolvimento com Barra",
+            Equipamento: "Barra",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2000/08/developpe-militaire-exercice-musculation.gif",
+            MusculoTrabalhado: "Ombros",
+            Descricao: "Exercício composto para os ombros, realizado com barra, focando no deltoide anterior e medial."
+        },
+        {
+            Nome: "Elevação Lateral com Halteres",
+            Equipamento: "Halteres",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2000/08/elevations-laterales-exercice-musculation.gif",
+            MusculoTrabalhado: "Ombros",
+            Descricao: "Isolamento para os ombros, especificamente o deltoide medial, melhorando a largura dos ombros."
+        },
+        {
+            Nome: "Desenvolvimento com Halteres",
+            Equipamento: "Halteres",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2022/02/developpe-epaule-halteres.gif",
+            MusculoTrabalhado: "Ombros",
+            Descricao: "Trabalha toda a musculatura dos ombros, com maior liberdade de movimento do que com a barra."
+        },
+        {
+            Nome: "Encolhimento com Halteres",
+            Equipamento: "Halteres",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2022/11/shrugs-avec-halteres.gif",
+            MusculoTrabalhado: "Trapézio",
+            Descricao: "Focado no desenvolvimento do trapézio, realizado com elevação dos ombros segurando halteres."
+        },
+        {
+            Nome: "Elevação Frontal com Halteres",
+            Equipamento: "Halteres",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2000/08/elevations-frontales-exercice-musculation.gif",
+            MusculoTrabalhado: "Ombros",
+            Descricao: "Isola o deltoide anterior, levantando halteres à frente do corpo para fortalecimento."
+        },
+    
+        // Exercícios de Tríceps
+        {
+            Nome: "Tríceps Testa com Barra",
+            Equipamento: "Barra",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2000/09/barre-front.gif",
+            MusculoTrabalhado: "Tríceps",
+            Descricao: "Exercício de isolamento que trabalha o tríceps, realizado deitado e com a barra movimentada em direção à testa."
+        },
+        {
+            Nome: "Tríceps Pulley",
+            Equipamento: "Cabos",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2022/04/extension-triceps-poulie-haute.gif",
+            MusculoTrabalhado: "Tríceps",
+            Descricao: "Trabalha o tríceps através da extensão do cotovelo, usando polia alta."
+        },
+        {
+            Nome: "Tríceps Francês com Halteres",
+            Equipamento: "Halteres",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2022/12/extensions-des-triceps-assis-avec-haltere.gif",
+            MusculoTrabalhado: "Tríceps",
+            Descricao: "Exercício de isolamento que foca no tríceps, realizado com halteres, estendendo os braços acima da cabeça."
+        },
+        {
+            Nome: "Mergulho em Paralelas",
+            Equipamento: "Paralelas",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2000/01/dips-pectoraux.gif",
+            MusculoTrabalhado: "Tríceps",
+            Descricao: "Exercício de peso corporal que foca no tríceps, realizado em paralelas, descendo o corpo e empurrando para cima."
+        },
+        {
+            Nome: "Tríceps Kickback com Halteres",
+            Equipamento: "Halteres",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2021/09/kickback.gif",
+            MusculoTrabalhado: "Tríceps",
+            Descricao: "Isolamento do tríceps realizado com halteres, estendendo o braço para trás enquanto se inclina levemente."
+        },
+        {
+            Nome: "Tríceps na Polia Alta",
+            Equipamento: "Cabos",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2022/04/extension-triceps-poulie-haute.gif",
+            MusculoTrabalhado: "Tríceps",
+            Descricao: "Exercício que utiliza polia alta para trabalhar o tríceps, estendendo os braços para baixo."
+        },
+        {
+            Nome: "Tríceps com Corda na Polia",
+            Equipamento: "Cabos",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2022/04/extension-triceps-poulie-haute.gif",
+            MusculoTrabalhado: "Tríceps",
+            Descricao: "Exercício que foca no tríceps, utilizando uma corda na polia para uma maior amplitude de movimento."
+        },
+        {
+            Nome: "Rosca Direta com Barra",
+            Equipamento: "Barra",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2021/09/curl-barre.gif",
+            MusculoTrabalhado: "Bíceps",
+            Descricao: "Exercício clássico para os bíceps, levantando a barra diretamente para frente do corpo."
+        },
+        {
+            Nome: "Rosca Alternada com Halteres",
+            Equipamento: "Halteres",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2022/08/curl-biceps-avec-halteres-alterne.gif",
+            MusculoTrabalhado: "Bíceps",
+            Descricao: "Rosca com halteres, alternando os braços para uma melhor simetria e controle muscular."
+        },
+        {
+            Nome: "Rosca Concentrada",
+            Equipamento: "Halteres",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2021/09/curl-concentre.gif",
+            MusculoTrabalhado: "Bíceps",
+            Descricao: "Exercício de isolamento que foca no pico do bíceps, realizado com o braço apoiado."
+        },
+        {
+            Nome: "Rosca Martelo",
+            Equipamento: "Halteres",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2022/09/curl-haltere-prise-neutre.gif",
+            MusculoTrabalhado: "Bíceps",
+            Descricao: "Exercício que trabalha os bíceps e o braquial, segurando os halteres com as palmas voltadas uma para a outra."
+        },
+        {
+            Nome: "Rosca Scott",
+            Equipamento: "Máquina ou Barra",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2022/01/curl-pupitre-machine-prechargee.gif",
+            MusculoTrabalhado: "Bíceps",
+            Descricao: "Isolamento dos bíceps realizado em banco Scott, proporcionando maior foco na contração do músculo."
+        },
+        {
+            Nome: "Rosca Inversa com Barra",
+            Equipamento: "Barra",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2022/04/curl-inverse-barre.gif",
+            MusculoTrabalhado: "Bíceps",
+            Descricao: "Exercício que foca nos músculos do antebraço e bíceps, segurando a barra com as palmas voltadas para baixo."
+        },
+        {
+            Nome: "Rosca Concentrada com Halteres",
+            Equipamento: "Halteres",
+            Link: "https://www.docteur-fitness.com/wp-content/uploads/2021/09/curl-concentre.gif",
+            MusculoTrabalhado: "Bíceps",
+            Descricao: "Isolamento do bíceps com o braço apoiado, maximizando a contração e o trabalho do músculo."
+        }
+];
+
 let treinos = [
     {
         Titulo: "Treino de Peito para Iniciantes",
@@ -5,42 +311,12 @@ let treinos = [
         GrupoMuscular: "Peito",
         Nivel: "Iniciante",
         Exercicios: [
-            {
-                Nome: "Supino Reto com Barra",
-                Series: 3,
-                Repeticoes: "10-12",
-                Descanso: 60,
-                Equipamento: "Barra e Halteres"
-            },
-            {
-                Nome: "Supino Inclinado com Halteres",
-                Series: 3,
-                Repeticoes: "10-12",
-                Descanso: 60,
-                Equipamento: "Halteres"
-            },
-            {
-                Nome: "Flexões",
-                Series: 3,
-                Repeticoes: "8-10",
-                Descanso: 60,
-                Equipamento: "Peso Corporal"
-            },
-            {
-                Nome: "Peck Deck",
-                Series: 3,
-                Repeticoes: "10-12",
-                Descanso: 60,
-                Equipamento: "Máquina"
-            },
-            {
-                Nome: "Crossover",
-                Series: 3,
-                Repeticoes: "10-12",
-                Descanso: 60,
-                Equipamento: "Cabos"
-            }
-        ]
+            { Nome: "Supino Reto com Barra", Series: 3, Repeticoes: "10-12", Descanso: 60 },
+            { Nome: "Supino Inclinado com Halteres", Series: 3, Repeticoes: "10-12", Descanso: 60 },
+            { Nome: "Flexões", Series: 3, Repeticoes: "8-10", Descanso: 60 },
+            { Nome: "Peck Deck", Series: 3, Repeticoes: "10-12", Descanso: 60 },
+            { Nome: "Crossover", Series: 3, Repeticoes: "10-12", Descanso: 60 }
+        ].map(ex => ({ ...ex, ...exercicios.find(e => e.Nome === ex.Nome) }))
     },
     {
         Titulo: "Treino de Peito para Intermediários",
@@ -48,42 +324,12 @@ let treinos = [
         GrupoMuscular: "Peito",
         Nivel: "Intermediário",
         Exercicios: [
-            {
-                Nome: "Supino Reto com Barra",
-                Series: 4,
-                Repeticoes: "8-10",
-                Descanso: 90,
-                Equipamento: "Barra"
-            },
-            {
-                Nome: "Supino Inclinado com Halteres",
-                Series: 4,
-                Repeticoes: "8-10",
-                Descanso: 90,
-                Equipamento: "Halteres"
-            },
-            {
-                Nome: "Crucifixo Inclinado com Halteres",
-                Series: 3,
-                Repeticoes: "10-12",
-                Descanso: 60,
-                Equipamento: "Halteres"
-            },
-            {
-                Nome: "Peck Deck",
-                Series: 4,
-                Repeticoes: "10-12",
-                Descanso: 60,
-                Equipamento: "Máquina"
-            },
-            {
-                Nome: "Crossover",
-                Series: 4,
-                Repeticoes: "10-12",
-                Descanso: 60,
-                Equipamento: "Cabos"
-            }
-        ]
+            { Nome: "Supino Reto com Barra", Series: 4, Repeticoes: "8-10", Descanso: 90 },
+            { Nome: "Supino Inclinado com Halteres", Series: 4, Repeticoes: "8-10", Descanso: 90 },
+            { Nome: "Crucifixo Inclinado com Halteres", Series: 3, Repeticoes: "10-12", Descanso: 60 },
+            { Nome: "Peck Deck", Series: 4, Repeticoes: "10-12", Descanso: 60 },
+            { Nome: "Crossover", Series: 4, Repeticoes: "10-12", Descanso: 60 }
+        ].map(ex => ({ ...ex, ...exercicios.find(e => e.Nome === ex.Nome) }))
     },
     {
         Titulo: "Treino de Peito para Avançados",
@@ -91,42 +337,13 @@ let treinos = [
         GrupoMuscular: "Peito",
         Nivel: "Avançado",
         Exercicios: [
-            {
-                Nome: "Supino Reto com Barra",
-                Series: 5,
-                Repeticoes: "6-8",
-                Descanso: 120,
-                Equipamento: "Barra"
-            },
-            {
-                Nome: "Supino Inclinado com Halteres",
-                Series: 5,
-                Repeticoes: "6-8",
-                Descanso: 120,
-                Equipamento: "Halteres"
-            },
-            {
-                Nome: "Supino Declinado com Barra",
-                Series: 4,
-                Repeticoes: "8-10",
-                Descanso: 90,
-                Equipamento: "Barra"
-            },
-            {
-                Nome: "Crucifixo com Cabos",
-                Series: 4,
-                Repeticoes: "10-12",
-                Descanso: 60,
-                Equipamento: "Cabos"
-            },
-            {
-                Nome: "Peck Deck com Dropset",
-                Series: 4,
-                Repeticoes: "12-15",
-                Descanso: 60,
-                Equipamento: "Máquina"
-            }
-        ]
+            { Nome: "Supino Reto com Barra", Series: 5, Repeticoes: "6-8", Descanso: 120 },
+            { Nome: "Supino Inclinado com Halteres", Series: 5, Repeticoes: "6-8", Descanso: 120 },
+            { Nome: "Supino Declinado com Barra", Series: 4, Repeticoes: "10-12", Descanso: 60 },
+            { Nome: "Peck Deck", Series: 4, Repeticoes: "10-12", Descanso: 60 },
+            { Nome: "Crossover", Series: 4, Repeticoes: "10-12", Descanso: 60 },
+            { Nome: "Crucifixo com Cabos", Series: 4, Repeticoes: "10-12", Descanso: 60 }
+        ].map(ex => ({ ...ex, ...exercicios.find(e => e.Nome === ex.Nome) }))
     },
     {
         Titulo: "Treino de Pernas para Iniciantes",
@@ -134,257 +351,172 @@ let treinos = [
         GrupoMuscular: "Pernas",
         Nivel: "Iniciante",
         Exercicios: [
-            {
-                Nome: "Agachamento Livre",
-                Series: 3,
-                Repeticoes: "12-15",
-                Descanso: 60,
-                Equipamento: "Barra"
-            },
-            {
-                Nome: "Leg Press",
-                Series: 3,
-                Repeticoes: "12-15",
-                Descanso: 60,
-                Equipamento: "Máquina"
-            },
-            {
-                Nome: "Cadeira Extensora",
-                Series: 3,
-                Repeticoes: "12-15",
-                Descanso: 60,
-                Equipamento: "Máquina"
-            },
-            {
-                Nome: "Cadeira Flexora",
-                Series: 3,
-                Repeticoes: "12-15",
-                Descanso: 60,
-                Equipamento: "Máquina"
-            },
-            {
-                Nome: "Elevação de Panturrilha",
-                Series: 3,
-                Repeticoes: "15-20",
-                Descanso: 45,
-                Equipamento: "Peso Corporal"
-            }
-        ]
+            { Nome: "Agachamento Livre", Series: 3, Repeticoes: "12-15", Descanso: 60 },
+            { Nome: "Leg Press", Series: 3, Repeticoes: "12-15", Descanso: 60 },
+            { Nome: "Cadeira Extensora", Series: 3, Repeticoes: "12-15", Descanso: 60 },
+            { Nome: "Cadeira Flexora", Series: 3, Repeticoes: "12-15", Descanso: 60 },
+            { Nome: "Elevação de Panturrilha", Series: 3, Repeticoes: "15-20", Descanso: 30 }
+        ].map(ex => ({ ...ex, ...exercicios.find(e => e.Nome === ex.Nome) }))
+    },
+    {
+        Titulo: "Treino de Pernas para Intermediários",
+        Descricao: "Treino focado em ganho de força e volume muscular para pernas.",
+        GrupoMuscular: "Pernas",
+        Nivel: "Intermediário",
+        Exercicios: [
+            { Nome: "Agachamento Livre com Peso", Series: 4, Repeticoes: "10-12", Descanso: 90 },
+            { Nome: "Leg Press", Series: 4, Repeticoes: "10-12", Descanso: 90 },
+            { Nome: "Cadeira Extensora", Series: 4, Repeticoes: "12-15", Descanso: 60 },
+            { Nome: "Cadeira Flexora", Series: 4, Repeticoes: "12-15", Descanso: 60 },
+            { Nome: "Elevação de Panturrilha", Series: 4, Repeticoes: "15-20", Descanso: 30 }
+        ].map(ex => ({ ...ex, ...exercicios.find(e => e.Nome === ex.Nome) }))
     },
     {
         Titulo: "Treino de Pernas para Avançados",
-        Descricao: "Treino para avançados focado na hipertrofia e força das pernas.",
+        Descricao: "Treino avançado de pernas para máxima hipertrofia e força.",
         GrupoMuscular: "Pernas",
         Nivel: "Avançado",
         Exercicios: [
-            {
-                Nome: "Agachamento Livre com Peso",
-                Series: 5,
-                Repeticoes: "6-8",
-                Descanso: 120,
-                Equipamento: "Barra"
-            },
-            {
-                Nome: "Leg Press com Dropset",
-                Series: 4,
-                Repeticoes: "8-10",
-                Descanso: 90,
-                Equipamento: "Máquina"
-            },
-            {
-                Nome: "Cadeira Extensora com Isometria",
-                Series: 4,
-                Repeticoes: "10-12",
-                Descanso: 60,
-                Equipamento: "Máquina"
-            },
-            {
-                Nome: "Cadeira Flexora com Isometria",
-                Series: 4,
-                Repeticoes: "10-12",
-                Descanso: 60,
-                Equipamento: "Máquina"
-            },
-            {
-                Nome: "Levantamento Terra com Barra",
-                Series: 4,
-                Repeticoes: "8-10",
-                Descanso: 90,
-                Equipamento: "Barra"
-            }
-        ]
+            { Nome: "Agachamento Livre com Peso", Series: 5, Repeticoes: "6-8", Descanso: 120 },
+            { Nome: "Leg Press com Dropset", Series: 4, Repeticoes: "8-10", Descanso: 60 },
+            { Nome: "Cadeira Extensora com Isometria", Series: 4, Repeticoes: "12-15", Descanso: 60 },
+            { Nome: "Cadeira Flexora com Isometria", Series: 4, Repeticoes: "12-15", Descanso: 60 },
+            { Nome: "Elevação de Panturrilha", Series: 5, Repeticoes: "15-20", Descanso: 30 }
+        ].map(ex => ({ ...ex, ...exercicios.find(e => e.Nome === ex.Nome) }))
     },
     {
         Titulo: "Treino de Costas para Iniciantes",
-        Descricao: "Treino básico para iniciantes desenvolverem as costas.",
+        Descricao: "Treino focado no desenvolvimento dos músculos das costas para iniciantes.",
         GrupoMuscular: "Costas",
         Nivel: "Iniciante",
         Exercicios: [
-            {
-                Nome: "Puxada Aberta com Barra",
-                Series: 3,
-                Repeticoes: "10-12",
-                Descanso: 60,
-                Equipamento: "Barra"
-            },
-            {
-                Nome: "Remada Curvada com Barra",
-                Series: 3,
-                Repeticoes: "10-12",
-                Descanso: 60,
-                Equipamento: "Barra"
-            },
-            {
-                Nome: "Remada Unilateral com Halteres",
-                Series: 3,
-                Repeticoes: "10-12",
-                Descanso: 60,
-                Equipamento: "Halteres"
-            },
-            {
-                Nome: "Puxada na Máquina",
-                Series: 3,
-                Repeticoes: "10-12",
-                Descanso: 60,
-                Equipamento: "Máquina"
-            },
-            {
-                Nome: "Barra Fixa Assistida",
-                Series: 3,
-                Repeticoes: "8-10",
-                Descanso: 90,
-                Equipamento: "Máquina"
-            }
-        ]
+            { Nome: "Puxada Aberta com Barra", Series: 3, Repeticoes: "10-12", Descanso: 60 },
+            { Nome: "Remada Curvada com Barra", Series: 3, Repeticoes: "10-12", Descanso: 60 },
+            { Nome: "Remada Unilateral com Halteres", Series: 3, Repeticoes: "10-12", Descanso: 60 },
+            { Nome: "Pulldown com Triângulo", Series: 3, Repeticoes: "10-12", Descanso: 60 }
+        ].map(ex => ({ ...ex, ...exercicios.find(e => e.Nome === ex.Nome) }))
+    },
+    {
+        Titulo: "Treino de Costas para Intermediários",
+        Descricao: "Treino avançado para aumento de força e volume nas costas.",
+        GrupoMuscular: "Costas",
+        Nivel: "Intermediário",
+        Exercicios: [
+            { Nome: "Puxada Aberta com Barra", Series: 4, Repeticoes: "8-10", Descanso: 90 },
+            { Nome: "Remada Curvada com Barra", Series: 4, Repeticoes: "8-10", Descanso: 90 },
+            { Nome: "Remada Unilateral com Halteres", Series: 4, Repeticoes: "10-12", Descanso: 60 },
+            { Nome: "Pulldown com Triângulo", Series: 4, Repeticoes: "10-12", Descanso: 60 }
+        ].map(ex => ({ ...ex, ...exercicios.find(e => e.Nome === ex.Nome) }))
     },
     {
         Titulo: "Treino de Costas para Avançados",
-        Descricao: "Treino desafiador para aumentar a massa muscular das costas.",
+        Descricao: "Treino intenso para maximizar a hipertrofia e definição das costas.",
         GrupoMuscular: "Costas",
         Nivel: "Avançado",
         Exercicios: [
-            {
-                Nome: "Puxada Aberta com Barra",
-                Series: 5,
-                Repeticoes: "8-10",
-                Descanso: 60,
-                Equipamento: "Barra"
-            },
-            {
-                Nome: "Remada Curvada com Barra",
-                Series: 4,
-                Repeticoes: "8-10",
-                Descanso: 60,
-                Equipamento: "Barra"
-            },
-            {
-                Nome: "Remada Unilateral com Halteres",
-                Series: 4,
-                Repeticoes: "8-10",
-                Descanso: 60,
-                Equipamento: "Halteres"
-            },
-            {
-                Nome: "Puxada na Máquina",
-                Series: 4,
-                Repeticoes: "10-12",
-                Descanso: 60,
-                Equipamento: "Máquina"
-            },
-            {
-                Nome: "Barra Fixa com Peso Adicional",
-                Series: 4,
-                Repeticoes: "6-8",
-                Descanso: 90,
-                Equipamento: "Peso Corporal"
-            }
-        ]
+            { Nome: "Puxada Aberta com Barra", Series: 5, Repeticoes: "6-8", Descanso: 120 },
+            { Nome: "Remada Curvada com Barra", Series: 5, Repeticoes: "6-8", Descanso: 120 },
+            { Nome: "Remada Unilateral com Halteres", Series: 4, Repeticoes: "8-10", Descanso: 60 },
+            { Nome: "Pulldown com Triângulo", Series: 4, Repeticoes: "10-12", Descanso: 60 }
+        ].map(ex => ({ ...ex, ...exercicios.find(e => e.Nome === ex.Nome) }))
+    },
+    {
+        Titulo: "Treino de Ombros para Iniciantes",
+        Descricao: "Treino básico para iniciantes fortalecerem os ombros.",
+        GrupoMuscular: "Ombros",
+        Nivel: "Iniciante",
+        Exercicios: [
+            { Nome: "Desenvolvimento com Halteres", Series: 3, Repeticoes: "10-12", Descanso: 60 },
+            { Nome: "Elevação Lateral com Halteres", Series: 3, Repeticoes: "12-15", Descanso: 60 },
+            { Nome: "Elevação Frontal com Halteres", Series: 3, Repeticoes: "12-15", Descanso: 60 }
+        ].map(ex => ({ ...ex, ...exercicios.find(e => e.Nome === ex.Nome) }))
     },
     {
         Titulo: "Treino de Ombros para Intermediários",
-        Descricao: "Treino para intermediários desenvolverem força e definição nos ombros.",
+        Descricao: "Treino focado em ganho de força e volume muscular para ombros.",
         GrupoMuscular: "Ombros",
         Nivel: "Intermediário",
         Exercicios: [
-            {
-                Nome: "Elevação Lateral com Halteres",
-                Series: 4,
-                Repeticoes: "12-15",
-                Descanso: 45,
-                Equipamento: "Halteres"
-            },
-            {
-                Nome: "Desenvolvimento Militar com Barra",
-                Series: 4,
-                Repeticoes: "8-10",
-                Descanso: 60,
-                Equipamento: "Barra"
-            },
-            {
-                Nome: "Elevação Frontal com Halteres",
-                Series: 4,
-                Repeticoes: "12-15",
-                Descanso: 45,
-                Equipamento: "Halteres"
-            },
-            {
-                Nome: "Encolhimento de Ombros com Barra",
-                Series: 4,
-                Repeticoes: "12-15",
-                Descanso: 45,
-                Equipamento: "Barra"
-            },
-            {
-                Nome: "Rotação Externa com Halteres",
-                Series: 4,
-                Repeticoes: "12-15",
-                Descanso: 45,
-                Equipamento: "Halteres"
-            }
-        ]
+            { Nome: "Desenvolvimento com Barra", Series: 4, Repeticoes: "8-10", Descanso: 90 },
+            { Nome: "Elevação Lateral com Halteres", Series: 4, Repeticoes: "10-12", Descanso: 60 },
+            { Nome: "Encolhimento com Halteres", Series: 4, Repeticoes: "10-12", Descanso: 60 }
+        ].map(ex => ({ ...ex, ...exercicios.find(e => e.Nome === ex.Nome) }))
     },
     {
-        Titulo: "Treino de Braços para Avançados",
-        Descricao: "Treino avançado para maximizar a hipertrofia de bíceps e tríceps.",
-        GrupoMuscular: "Braços",
+        Titulo: "Treino de Ombros para Avançados",
+        Descricao: "Treino avançado de ombros para máxima hipertrofia e força.",
+        GrupoMuscular: "Ombros",
         Nivel: "Avançado",
         Exercicios: [
-            {
-                Nome: "Rosca Direta com Barra",
-                Series: 5,
-                Repeticoes: "6-8",
-                Descanso: 90,
-                Equipamento: "Barra"
-            },
-            {
-                Nome: "Tríceps Testa com Barra",
-                Series: 5,
-                Repeticoes: "6-8",
-                Descanso: 90,
-                Equipamento: "Barra"
-            },
-            {
-                Nome: "Rosca Alternada com Halteres",
-                Series: 4,
-                Repeticoes: "8-10",
-                Descanso: 60,
-                Equipamento: "Halteres"
-            },
-            {
-                Nome: "Mergulho entre bancos com Peso",
-                Series: 4,
-                Repeticoes: "8-10",
-                Descanso: 60,
-                Equipamento: "Peso Corporal"
-            },
-            {
-                Nome: "Rosca Scott com Isometria",
-                Series: 4,
-                Repeticoes: "10-12",
-                Descanso: 60,
-                Equipamento: "Máquina"
-            }
-        ]
+            { Nome: "Desenvolvimento com Barra", Series: 5, Repeticoes: "6-8", Descanso: 120 },
+            { Nome: "Elevação Lateral com Halteres", Series: 5, Repeticoes: "8-10", Descanso: 60 },
+            { Nome: "Elevação Frontal com Halteres", Series: 4, Repeticoes: "10-12", Descanso: 60 },
+            { Nome: "Encolhimento com Halteres", Series: 4, Repeticoes: "10-12", Descanso: 60 }
+        ].map(ex => ({ ...ex, ...exercicios.find(e => e.Nome === ex.Nome) }))
+    },
+    {
+        Titulo: "Treino de Tríceps para Iniciantes",
+        Descricao: "Treino básico para iniciantes fortalecerem os tríceps.",
+        GrupoMuscular: "Tríceps",
+        Nivel: "Iniciante",
+        Exercicios: [
+            { Nome: "Tríceps Testa com Barra", Series: 3, Repeticoes: "10-12", Descanso: 60 },
+            { Nome: "Tríceps Pulley", Series: 3, Repeticoes: "10-12", Descanso: 60 }
+        ].map(ex => ({ ...ex, ...exercicios.find(e => e.Nome === ex.Nome) }))
+    },
+    {
+        Titulo: "Treino de Tríceps para Intermediários",
+        Descricao: "Treino focado em ganho de força e volume muscular para tríceps.",
+        GrupoMuscular: "Tríceps",
+        Nivel: "Intermediário",
+        Exercicios: [
+            { Nome: "Tríceps Testa com Barra", Series: 4, Repeticoes: "8-10", Descanso: 90 },
+            { Nome: "Tríceps Pulley", Series: 4, Repeticoes: "10-12", Descanso: 60 },
+            { Nome: "Tríceps Francês com Halteres", Series: 3, Repeticoes: "10-12", Descanso: 60 }
+        ].map(ex => ({ ...ex, ...exercicios.find(e => e.Nome === ex.Nome) }))
+    },
+    {
+        Titulo: "Treino de Tríceps para Avançados",
+        Descricao: "Treino intenso para maximizar a hipertrofia dos tríceps.",
+        GrupoMuscular: "Tríceps",
+        Nivel: "Avançado",
+        Exercicios: [
+            { Nome: "Tríceps Testa com Barra", Series: 5, Repeticoes: "6-8", Descanso: 120 },
+            { Nome: "Tríceps Pulley", Series: 5, Repeticoes: "8-10", Descanso: 60 },
+            { Nome: "Tríceps Francês com Halteres", Series: 4, Repeticoes: "8-10", Descanso: 60 }
+        ].map(ex => ({ ...ex, ...exercicios.find(e => e.Nome === ex.Nome) }))
+    },
+    {
+        Titulo: "Treino de Bíceps para Iniciantes",
+        Descricao: "Treino básico para iniciantes fortalecerem os bíceps.",
+        GrupoMuscular: "Bíceps",
+        Nivel: "Iniciante",
+        Exercicios: [
+            { Nome: "Rosca Direta com Barra", Series: 3, Repeticoes: "10-12", Descanso: 60 },
+            { Nome: "Rosca Alternada com Halteres", Series: 3, Repeticoes: "10-12", Descanso: 60 }
+        ].map(ex => ({ ...ex, ...exercicios.find(e => e.Nome === ex.Nome) }))
+    },
+    {
+        Titulo: "Treino de Bíceps para Intermediários",
+        Descricao: "Treino focado em ganho de força e volume muscular para bíceps.",
+        GrupoMuscular: "Bíceps",
+        Nivel: "Intermediário",
+        Exercicios: [
+            { Nome: "Rosca Direta com Barra", Series: 4, Repeticoes: "8-10", Descanso: 90 },
+            { Nome: "Rosca Alternada com Halteres", Series: 4, Repeticoes: "10-12", Descanso: 60 },
+            { Nome: "Rosca Concentrada", Series: 3, Repeticoes: "10-12", Descanso: 60 }
+        ].map(ex => ({ ...ex, ...exercicios.find(e => e.Nome === ex.Nome) }))
+    },
+    {
+        Titulo: "Treino de Bíceps para Avançados",
+        Descricao: "Treino intenso para maximizar a hipertrofia dos bíceps.",
+        GrupoMuscular: "Bíceps",
+        Nivel: "Avançado",
+        Exercicios: [
+            { Nome: "Rosca Direta com Barra", Series: 5, Repeticoes: "6-8", Descanso: 120 },
+            { Nome: "Rosca Alternada com Halteres", Series: 5, Repeticoes: "8-10", Descanso: 60 },
+            { Nome: "Rosca Concentrada", Series: 4, Repeticoes: "8-10", Descanso: 60 }
+        ].map(ex => ({ ...ex, ...exercicios.find(e => e.Nome === ex.Nome) }))
     }
 ];
 

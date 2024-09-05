@@ -16,31 +16,35 @@ function criarElementoResultado(titulo, descricao, grupoMuscular, nivel, objetiv
 function gerarResultados() {
     let resultadosHTML = '';
 
-    // Adicionando treinos à seção
-    treinos.forEach(treino => {
+    // Verifica se estamos na página de treinos
+    if (window.location.pathname === "/views/treinos.html") {
+        // Itera sobre cada treino e cria um elemento HTML para exibir suas informações
+        treinos.forEach(treino => {
         resultadosHTML += criarElementoResultado(
             treino.Titulo,
             treino.Descricao,
             treino.GrupoMuscular,
             treino.Nivel,
-            '', // Objetivo não se aplica aqui
-            '#', // Altere '#' para um link relevante
-            treino.Exercicios // Passa o array de objetos
+            '', // Objetivo não se aplica a treinos
+            '#', // Link placeholder - substituir por um link real
+            treino.Exercicios // Passa o array de exercícios
         );
-    });
-
-    // Adicionando dietas à seção
-    dietas.forEach(dieta => {
+        });
+    } else {
+        // Itera sobre cada dieta e cria um elemento HTML para exibir suas informações
+        dietas.forEach(dieta => {
         resultadosHTML += criarElementoResultado(
             dieta.Titulo,
             dieta.Descricao,
-            '', // Grupo Muscular não se aplica aqui
-            '', // Nível não se aplica aqui
+            '', // Grupo Muscular não se aplica a dietas
+            '', // Nível não se aplica a dietas
             dieta.Objetivo,
-            '#', // Altere '#' para um link relevante
-            dieta.Refeicoes // Passa o array de objetos
+            '#', // Link placeholder - substituir por um link real
+            dieta.Refeicoes // Passa o array de refeições
         );
-    });
+        });
+    }
+
 
     // Inserindo o HTML gerado na seção
     document.getElementById('resultados').innerHTML = resultadosHTML;
@@ -61,29 +65,36 @@ function abrirModal(titulo, conteudo) {
     document.getElementById('modalTitulo').innerText = titulo;
 
     // Formata o conteúdo do modal
-    let conteudoHTML = '<ul>';
+    let conteudoHTML = '<div class="flex-container">';
     conteudo.forEach(item => {
-        conteudoHTML += `<div class="item-resultado"><strong>${item.Nome}
-        </strong>: 
-        
-        ${item.Series ? `<p><strong>Series:</strong> ${item.Series}</p>` : ''}
-        ${item.Repeticoes ? `<p><strong>Repeticoes:</strong> ${item.Repeticoes}</p>` : ''}
-        ${item.Descanso ? `<p><strong>Descanso:</strong> ${item.Descanso}</p>` : ''}
-        ${item.Equipamento ? `<p><strong>Equipamento:</strong> ${item.Equipamento}</p>` : ''}
+        conteudoHTML += 
+        `<div class="item-resultado item-modal">
+            <strong>${item.Nome} <div>${item.Link ? `<img  class="imagem"  src="${item.Link}" alt="${item.Nome}">`: ''} </div></strong> 
+            
+                <div class="texto">
+                    ${item.Series ? `<p><strong>Series:</strong> ${item.Series}</p>` : ''}
+                    ${item.Repeticoes ? `<p><strong>Repeticoes:</strong> ${item.Repeticoes}</p>` : ''}
+                    ${item.Descanso ? `<p><strong>Descanso:</strong> ${item.Descanso}</p>` : ''}
+                    ${item.Equipamento ? `<p><strong>Equipamento:</strong> ${item.Equipamento}</p>` : ''}
 
-        
-        ${item.Alimentos ? `<p><strong>Alimentos:</strong> ${item.Alimentos}</p>` : ''}
-        ${item.Calorias ? `<p><strong>Calorias:</strong> ${item.Calorias}</p>` : ''}
-        ${item.Macros ? `<p><strong>Macros:</strong> 
-            <strong>Carboidratos: </strong>${item.Macros.carboidratos}
-              <strong>Proteinas: </strong>${item.Macros.proteinas}
-                <strong>Gorduras: </strong>${item.Macros.gorduras}
-            </p>` : ''}
-        </div>`
+
+                    ${item.Alimentos ? `<p><strong>Alimentos:</strong> ${item.Alimentos}</p>` : ''}
+                    ${item.Calorias ? `<p><strong>Calorias:</strong> ${item.Calorias}</p>` : ''}
+                    ${item.Macros ? `<p><strong>Macros:</strong> 
+                        <strong>Carboidratos: </strong>${item.Macros.carboidratos}
+                            <strong>Proteinas: </strong>${item.Macros.proteinas}
+                            <strong>Gorduras: </strong>${item.Macros.gorduras}
+                        </p>` : ''}
+                </div>
+                
+            
+            
+        </div>
+        `
        
         ;
     });
-    conteudoHTML += '</ul>';
+    conteudoHTML += '</div>';
 
     document.getElementById('modalConteudo').innerHTML = conteudoHTML;
     document.getElementById('myModal').style.display = "block";
@@ -101,5 +112,7 @@ window.onclick = function(event) {
     }
 }
 
-// Chama a função para gerar os resultados após o carregamento do DOM
-document.addEventListener('DOMContentLoaded', gerarResultados);
+// Click do botão Pesquisar
+function pesquisar() {
+    gerarResultados();
+}

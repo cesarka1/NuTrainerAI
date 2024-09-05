@@ -19,6 +19,7 @@ body {
     padding: 20px;
     position: fixed;
     height: 100%;
+    transition: width 0.3s; /* Transição suave para a sidebar */
 }
 
 .sidebar h2 {
@@ -43,6 +44,7 @@ body {
 .main-content {
     margin-left: 240px; /* Ajustado para o novo tamanho da sidebar */
     padding: 20px;
+    transition: margin-left 0.3s; /* Transição suave para o conteúdo principal */
 }
 
 /* Adicionando espaçamento entre a sidebar e os componentes */
@@ -52,9 +54,38 @@ body {
     margin-left: 20px; /* Espaço entre a sidebar e os componentes */
 }
 
+
+.about{
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+        background-color: #f4f4f4;
+       text-align: center;
+       justify-content: flex-start; 
+       align-items: center;
+
+    }
+    h1, h2 {
+        color: #333;
+    }
+    h1 {
+        text-align: center;
+    }
+    section {
+        background: #fff;
+        padding: 20px;
+        margin: 10px 0;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+}
+
+
 /* Estiliza os títulos h1 */
 h1 {
-    font-size: 2.5rem;
+    font-size: 4rem;
     color: #222831;
     text-align: center;
 }
@@ -68,15 +99,33 @@ input[type="text"], input[type="number"], select {
     border-radius: 4px;
 }
 
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #30475E; /* Cor do botão */
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 10px; /* Espaço acima do botão */
+section {
+    display: flex; /* Usa Flexbox para layout */
+    flex-direction: column; /* Alinha os itens na vertical */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    margin-bottom: 3rem; /* Espaçamento abaixo de cada seção */
+    justify-content: center;
+}
+
+
+.search-container {
+    display: flex; /* Usa Flexbox para layout */
+    flex-direction: column; /* Alinha os itens na vertical */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    width: 100%; /* Ajuste a largura do contêiner */
+    max-width: 30rem; /* Define uma largura máxima para o contêiner */
+    margin: 0 auto; /* Centraliza o contêiner */
+}
+
+section button {
+    padding: 0.8rem 1.2rem; /* Espaçamento interno do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 1.5rem; /* Borda arredondada */
+    background-color: #30475E; /* Cor de fundo do botão */
+    color: #F5F7F8; /* Cor do texto do botão */
+    font-size: 1rem; /* Tamanho da fonte */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+
 }
 
 button:hover {
@@ -103,27 +152,60 @@ footer {
     margin-bottom: 20px; /* Espaço abaixo da grade */
 }
 
-
 .item-resultado {
-    background: #FFFFFF; /* Cor de fundo dos itens */
-    border-radius: 0.6rem; /* Borda arredondada */
-    padding: 1rem; /* Espaçamento interno */
-    margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
+    background: #FFFFFF; 
+    border-radius: 0.4rem; /* Borda arredondada */
+    padding: 0.5rem; /* Reduz o espaçamento interno */
+    margin-bottom: 0.5rem; /* Reduz o espaçamento abaixo dos itens */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    display: flex;
+    flex-direction: column; /* Alinha os itens verticalmente */
+    justify-content: flex-start; /* Alinha os itens ao início */
 
-    h2 {
-        font-size: 1.5rem; /* Tamanho da fonte */
-        color: #222831; /* Cor do texto */
+    width: 30%; 
+    .h2{
+       text-align: center; 
     }
-
-    a {
-        text-decoration: none; /* Remove o sublinhado padrão dos links */
-        color: #30475E; /* Cor do texto dos links */
-        hover {
-            text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
-        }
+    
+    .imagem {
+     width: 70%; /* Define a largura da imagem */
+     margin-left: 15%;
     }
+    .texto {
+         flex: 1; /* Ocupa o espaço restante */
+     }  
 }
+
+.item-resultado .texto {
+    margin-top: 0.5rem; /* Espaçamento entre o título e o texto */
+}
+
+.item-resultado h2 {
+    font-size: 1.5rem; /* Tamanho da fonte */
+    color: #222831; /* Cor do texto */
+}
+
+.item-resultado a {
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    color: #30475E; /* Cor do texto dos links */
+}
+
+.item-resultado a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+.item-Modal{
+    background: #FFFFFF; 
+    border-radius: 0.4rem; /* Borda arredondada */
+    padding: 0.5rem; /* Reduz o espaçamento interno */
+    margin-bottom: 0.5rem; /* Reduz o espaçamento abaixo dos itens */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    p{
+        font-size: 20; /* Ocupa o espaço restante */
+    } 
+
+}
+
 
 /* Modal */
 
@@ -142,10 +224,29 @@ footer {
 
 .modal-content {
     background-color: #dbf3eb;
-    margin: 15% auto; /* Centraliza o modal */
-    padding: 20px;
+    margin: 5% auto; /* Reduz a margem superior e inferior */
+    padding: 10px; /* Reduz o padding */
     border: 1px solid #888;
-    width: 80%; /* Largura do modal */
+    width: 90%; /* Largura do modal */
+    max-width: 1000px; /* Limite máximo da largura */
+}
+
+.flex-container{
+    display: flex;
+    gap: 10px;
+    padding-left: 10%;
+    flex-wrap: wrap;
+
+}
+
+.item-modal{
+   width: 40%;
+   .imagem {
+    width: 70%; /* Define a largura da imagem */
+   }
+   .texto {
+        flex: 10; /* Ocupa o espaço restante */
+    }
 }
 
 .close {
@@ -160,4 +261,83 @@ footer {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 90%; /* Reduz a largura da sidebar em dispositivos menores */
+        position: relative;
+        
+        
+
+    }
+
+    .slidebar-items{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding: 20px;
+        gap: 10px;
+
+        li{
+            width: 30%; /* Cada item ocupará 20% da largura disponível */
+            margin: 10px;
+            text-align: center;
+        }       
+               
+    }
+        .main-content > header,
+    .main-content > main,
+    .main-content > footer {
+        margin-left: 0px; /* Espaço entre a sidebar e os componentes */
+    }
+
+    .main-content {
+        margin-left: 0px; 
+    }
+
+    h1 {
+        font-size: 2rem; /* Ajusta o tamanho do título */
+    }
+
+    .item-resultado {
+        flex-direction: column; /* Alinha os itens verticalmente */
+    }
+
+    .flex-container{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding-left: 0%;
+        .imagem {
+            margin-left: 0%;
+            width: 100%; /* Imagem ocupa 100% em dispositivos menores */
+        }
+        .item-resultado{
+            width: 70%;
+        }
+        
+    }
+
+
+
+    .item-modal{
+        width: 80%;
+        padding-top: 5%;
+    }
+
+    .exercicios{
+        width: 80%;
+        padding-top: 5%;
+        .imagem {
+            width: 100%; 
+            margin-left: 0%;
+           }
+    }
+    
+
 }
