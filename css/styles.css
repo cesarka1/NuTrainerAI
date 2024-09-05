@@ -134,6 +134,21 @@ footer {
     text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
 
+.exercicios{
+    width: 30%;
+    display: flex;
+    
+    .h2{
+       text-align: center; 
+    }
+    
+    .imagem {
+     width: 70%; /* Define a largura da imagem */
+    }
+    .texto {
+         flex: 1; /* Ocupa o espaço restante */
+     }  
+}
 
 /* Modal */
 
@@ -219,6 +234,13 @@ footer {
     }
 
     .item-modal{
-        width: 75%;
+        width: 80%;
         padding-top: 5%;
     }
+
+    .exercicios{
+        width: 80%;
+        padding-top: 5%;
+    }
+
+}
