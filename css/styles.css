@@ -56,7 +56,7 @@ body {
 
 /* Estiliza os títulos h1 */
 h1 {
-    font-size: 2.5rem;
+    font-size: 4rem;
     color: #222831;
     text-align: center;
 }
@@ -70,15 +70,33 @@ input[type="text"], input[type="number"], select {
     border-radius: 4px;
 }
 
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #30475E; /* Cor do botão */
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 10px; /* Espaço acima do botão */
+section {
+    display: flex; /* Usa Flexbox para layout */
+    flex-direction: column; /* Alinha os itens na vertical */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    margin-bottom: 3rem; /* Espaçamento abaixo de cada seção */
+    justify-content: center;
+}
+
+
+.search-container {
+    display: flex; /* Usa Flexbox para layout */
+    flex-direction: column; /* Alinha os itens na vertical */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    width: 100%; /* Ajuste a largura do contêiner */
+    max-width: 35rem; /* Define uma largura máxima para o contêiner */
+    margin: 0 auto; /* Centraliza o contêiner */
+}
+
+section button {
+    padding: 0.8rem 1.2rem; /* Espaçamento interno do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 1.5rem; /* Borda arredondada */
+    background-color: #30475E; /* Cor de fundo do botão */
+    color: #F5F7F8; /* Cor do texto do botão */
+    font-size: 1rem; /* Tamanho da fonte */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+
 }
 
 button:hover {
@@ -209,11 +227,10 @@ footer {
 @media (max-width: 768px) {
     .sidebar {
         width: 100px; /* Reduz a largura da sidebar em dispositivos menores */
-        
     }
 
     .main-content {
-        margin-left: 120px; 
+        margin-left: 0px; 
     }
 
     h1 {
