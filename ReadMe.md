@@ -76,6 +76,6 @@ Agradeço seu apoio ao NuTrainAI. Juntos, podemos promover um estilo de vida sau
   <a href="https://github.com/cesarka1"><img src="https://img.shields.io/badge/github-3b4c52.svg?style=for-the-badge&logo=github&logoColor=white"></a>
 </div>
 
-### Galeria
+
 
 
