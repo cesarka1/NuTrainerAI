@@ -3,7 +3,7 @@
 O **NuTrainAI** é um sistema inovador que busca auxiliar os usuários no mundo fitness, oferecendo uma lista de exercícios com animações de execução, fichas de treino categorizadas por níveis e sugestões de dietas personalizadas de acordo com os objetivos do usuário. Um dos principais diferenciais do NuTrainAI é a integração com a inteligência do Gemini da Google, permitindo consultorias personalizadas e respostas a dúvidas com base nas características individuais, como sexo, idade, peso e altura.
 
 
-Disponivel em: https://cesarka1.github.io/NuTrainAI/
+Disponivel em: https://cesarka1.github.io/NuTrainerAI/
 
 <img src="images/banner.png" alt="logo gemini">
 
