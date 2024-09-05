@@ -1,20 +1,30 @@
 function criarElementoResultadoExercicio(exercicio) {
+    // Cria um elemento HTML para exibir as informações de um exercício.
+    // Retorna uma string HTML formatada.
+  
     return `
-        <div class="item-resultado">
-            <h2>
-                <a href="#" class="mais-informacoes" data-titulo="${exercicio.Nome}" data-conteudo='${JSON.stringify(exercicio)}'>${exercicio.Nome}</a>
-            </h2>
-            <div>${exercicio.Link ? `<img class="imagem" src="${exercicio.Link}" alt="${exercicio.Nome}">` : ''}</div>
-            <div>
-            ${exercicio.MusculoTrabalhado ? `<p><strong>Músculo Trabalhado:</strong> ${exercicio.MusculoTrabalhado}</p>` : ''}
-            ${exercicio.Equipamento ? `<p><strong>Equipamento:</strong> ${exercicio.Equipamento}</p>` : ''}
-            <a href="#" class="mais-informacoes" data-titulo="${exercicio.Nome}" data-conteudo='${JSON.stringify(exercicio)}'>Mais informações</a>
-            </div>
+      <div class="item-resultado">
+        <h2>
+          <a href="#" class="mais-informacoes" 
+             data-titulo="${exercicio.Nome}" 
+             data-conteudo='${JSON.stringify(exercicio)}'>
+            ${exercicio.Nome} </a>
+        </h2>
+        <div>
+          ${exercicio.Link ? `<img class="imagem" src="${exercicio.Link}" alt="${exercicio.Nome}">` : ''} </div>
+        <div>
+          ${exercicio.MusculoTrabalhado ? `<p><strong>Músculo Trabalhado:</strong> ${exercicio.MusculoTrabalhado}</p>` : ''} ${exercicio.Equipamento ? `<p><strong>Equipamento:</strong> ${exercicio.Equipamento}</p>` : ''} <a href="#" class="mais-informacoes" 
+             data-titulo="${exercicio.Nome}" 
+             data-conteudo='${JSON.stringify(exercicio)}'>
+            Mais informações
+          </a>
         </div>
+      </div>
     `;
-}
+  }
 
-function gerarResultadosExercicios() {
+
+  function gerarResultadosExercicios() {
     let resultadosHTML = '';
 
     // Gerando o HTML para cada exercício
@@ -37,17 +47,18 @@ function gerarResultadosExercicios() {
     });
 }
 
+
 function abrirModalExercicio(titulo, conteudo) {
-    document.getElementById('modalTitulo').innerText = titulo;
+   
 
     // Formata o conteúdo do modal
     let conteudoHTML = `
-    <div class="item-resultado ">
-        <strong>${conteudo.Nome} <div>${conteudo.Link ? `<img class="imagem" src="${conteudo.Link}" alt="${conteudo.Nome}">` : ''}</div></strong> 
+    <div class=" item-Modal">
+        <strong><h2>${titulo}</h2>  <div>${conteudo.Link ? `<img class="imagem" src="${conteudo.Link}" alt="${conteudo.Nome}">` : ''}</div></strong> 
         <div class="texto">
-            ${conteudo.Descricao ? `<p><strong>Descrição:</strong> ${conteudo.Descricao}</p>` : ''}
-            ${conteudo.MusculoTrabalhado ? `<p><strong>Músculo Trabalhado:</strong> ${conteudo.MusculoTrabalhado}</p>` : ''}
-            ${conteudo.Equipamento ? `<p><strong>Equipamento:</strong> ${conteudo.Equipamento}</p>` : ''}
+            ${conteudo.Descricao ? `<h3><strong>Descrição:</strong> ${conteudo.Descricao}</h3>` : ''}
+            ${conteudo.MusculoTrabalhado ? `<h3><strong>Músculo Trabalhado:</strong> ${conteudo.MusculoTrabalhado}</h3>` : ''}
+            ${conteudo.Equipamento ? `<h3><strong>Equipamento:</strong> ${conteudo.Equipamento}</h3>` : ''}
         </div>
     </div>`;
 
@@ -67,5 +78,7 @@ window.onclick = function(event) {
     }
 }
 
-// Chama a função para gerar os resultados após o carregamento do DOM
-document.addEventListener('DOMContentLoaded', gerarResultadosExercicios);
+function pesquisar() {
+    gerarResultadosExercicios();
+}
+

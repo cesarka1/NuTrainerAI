@@ -10,12 +10,12 @@
 <body>
     <div class="sidebar">
         <h2>Menu</h2>
-        <ul>
+        <ul class="slidebar-items">
             <li><a href="index.html">Sobre</a></li>
             <li><a href="exercicios.html">Exercícios</a></li>
             <li><a href="treinos.html">Treinos</a></li>
             <li><a href="dietas.html">Dietas</a></li>
-            <li><a href="consulta.html">Consulta com o NuTrainerAi</a></li>
+            <li><a href="consulta.html">NuTrainerAi</a></li>
             <li><a href="help.html">Ajuda</a></li>
         </ul>
     </div>
@@ -29,14 +29,14 @@
                 <h2>Pesquise por exercícios</h2>
                 <div class="search-container">
                     <input type="text" placeholder="Busque por um exercício">
-                    <button>Pesquisar</button>
+                    <button onclick="pesquisar()" >Pesquisar</button>
                 </div>
                 <p></p>
             </section>
             <div class="resultados-pesquisa flex-container" id="resultados-exercicios">
             </section>                
         </main>
-        <div id="myModal" class="modal">
+        <div id="myModal" class="modal item-resultado">
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <h2 id="modalTitulo"></h2>

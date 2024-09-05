@@ -16,37 +16,34 @@ function criarElementoResultado(titulo, descricao, grupoMuscular, nivel, objetiv
 function gerarResultados() {
     let resultadosHTML = '';
 
+    // Verifica se estamos na página de treinos
     if (window.location.pathname === "/views/treinos.html") {
-        
-    
-    // Adicionando treinos à seção
-    treinos.forEach(treino => {
+        // Itera sobre cada treino e cria um elemento HTML para exibir suas informações
+        treinos.forEach(treino => {
         resultadosHTML += criarElementoResultado(
             treino.Titulo,
             treino.Descricao,
             treino.GrupoMuscular,
             treino.Nivel,
-            '', // Objetivo não se aplica aqui
-            '#', // Altere '#' para um link relevante
-            treino.Exercicios // Passa o array de objetos
+            '', // Objetivo não se aplica a treinos
+            '#', // Link placeholder - substituir por um link real
+            treino.Exercicios // Passa o array de exercícios
         );
-    });
-}
-else{
-
-    // Adicionando dietas à seção
-    dietas.forEach(dieta => {
+        });
+    } else {
+        // Itera sobre cada dieta e cria um elemento HTML para exibir suas informações
+        dietas.forEach(dieta => {
         resultadosHTML += criarElementoResultado(
             dieta.Titulo,
             dieta.Descricao,
-            '', // Grupo Muscular não se aplica aqui
-            '', // Nível não se aplica aqui
+            '', // Grupo Muscular não se aplica a dietas
+            '', // Nível não se aplica a dietas
             dieta.Objetivo,
-            '#', // Altere '#' para um link relevante
-            dieta.Refeicoes // Passa o array de objetos
+            '#', // Link placeholder - substituir por um link real
+            dieta.Refeicoes // Passa o array de refeições
         );
-    });
-}
+        });
+    }
 
 
     // Inserindo o HTML gerado na seção
@@ -115,5 +112,7 @@ window.onclick = function(event) {
     }
 }
 
-// Chama a função para gerar os resultados após o carregamento do DOM
-document.addEventListener('DOMContentLoaded', gerarResultados);
+// Click do botão Pesquisar
+function pesquisar() {
+    gerarResultados();
+}
