@@ -24,12 +24,15 @@ function criarElementoResultadoExercicio(exercicio) {
   }
 
 
-  function gerarResultadosExercicios() {
+  function gerarResultadosExercicios(resultados) {
     let resultadosHTML = '';
+   
 
     // Gerando o HTML para cada exercício
-    exercicios.forEach(exercicio => {
-        resultadosHTML += criarElementoResultadoExercicio(exercicio);
+  
+
+    resultados.forEach(exercicio => {
+      resultadosHTML += criarElementoResultadoExercicio(exercicio);
     });
 
     // Inserindo o HTML gerado na seção
@@ -79,6 +82,21 @@ window.onclick = function(event) {
 }
 
 function pesquisar() {
-    gerarResultadosExercicios();
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  let resultadosFiltrados;
+
+  if (input === "") {
+      resultadosFiltrados = exercicios; // Mostra todos os exercícios se o campo estiver vazio
+  } else {
+    // Filtra com base em todos os campos
+      resultadosFiltrados = exercicios.filter(exercicio => 
+          exercicio.Nome.toLowerCase().includes(input) ||
+          (exercicio.Descricao && exercicio.Descricao.toLowerCase().includes(input)) ||
+          (exercicio.MusculoTrabalhado && exercicio.MusculoTrabalhado.toLowerCase().includes(input)) ||
+          (exercicio.Equipamento && exercicio.Equipamento.toLowerCase().includes(input))
+      );
+  }
+
+  gerarResultadosExercicios(resultadosFiltrados);
 }
 

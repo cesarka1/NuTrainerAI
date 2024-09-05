@@ -13,37 +13,32 @@ function criarElementoResultado(titulo, descricao, grupoMuscular, nivel, objetiv
     `;
 }
 
-function gerarResultados() {
+function gerarResultados(resultados) {
     let resultadosHTML = '';
 
-    // Verifica se estamos na página de treinos
-    if (window.location.pathname === "/views/treinos.html") {
-        // Itera sobre cada treino e cria um elemento HTML para exibir suas informações
-        treinos.forEach(treino => {
-        resultadosHTML += criarElementoResultado(
-            treino.Titulo,
-            treino.Descricao,
-            treino.GrupoMuscular,
-            treino.Nivel,
-            '', // Objetivo não se aplica a treinos
-            '#', // Link placeholder - substituir por um link real
-            treino.Exercicios // Passa o array de exercícios
-        );
-        });
-    } else {
-        // Itera sobre cada dieta e cria um elemento HTML para exibir suas informações
-        dietas.forEach(dieta => {
-        resultadosHTML += criarElementoResultado(
-            dieta.Titulo,
-            dieta.Descricao,
-            '', // Grupo Muscular não se aplica a dietas
-            '', // Nível não se aplica a dietas
-            dieta.Objetivo,
-            '#', // Link placeholder - substituir por um link real
-            dieta.Refeicoes // Passa o array de refeições
-        );
-        });
-    }
+    resultados.forEach(item => {
+        if (window.location.pathname === "/views/treinos.html") {
+            resultadosHTML += criarElementoResultado(
+                item.Titulo,
+                item.Descricao,
+                item.GrupoMuscular,
+                item.Nivel,
+                '', // Objetivo não se aplica a treinos
+                '#', // Link placeholder - substituir por um link real
+                item.Exercicios // Passa o array de exercícios
+            );
+        } else {
+            resultadosHTML += criarElementoResultado(
+                item.Titulo,
+                item.Descricao,
+                '', // Grupo Muscular não se aplica a dietas
+                '', // Nível não se aplica a dietas
+                item.Objetivo,
+                '#', // Link placeholder - substituir por um link real
+                item.Refeicoes // Passa o array de refeições
+            );
+        }
+    });
 
 
     // Inserindo o HTML gerado na seção
@@ -112,7 +107,25 @@ window.onclick = function(event) {
     }
 }
 
-// Click do botão Pesquisar
 function pesquisar() {
-    gerarResultados();
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    let resultadosFiltrados = [];
+
+    // Verifica se estamos na página de treinos
+    if (window.location.pathname === "/views/treinos.html") {
+        resultadosFiltrados = treinos.filter(treino => 
+            treino.Titulo.toLowerCase().includes(input) ||
+            treino.Descricao.toLowerCase().includes(input) ||
+            (treino.GrupoMuscular && treino.GrupoMuscular.toLowerCase().includes(input)) ||
+            (treino.Nivel && treino.Nivel.toLowerCase().includes(input))
+        );
+    } else {
+        resultadosFiltrados = dietas.filter(dieta => 
+            dieta.Titulo.toLowerCase().includes(input) ||
+            dieta.Descricao.toLowerCase().includes(input) ||
+            (dieta.Objetivo && dieta.Objetivo.toLowerCase().includes(input))
+        );
+    }
+
+    gerarResultados(resultadosFiltrados);
 }
