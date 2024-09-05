@@ -106,7 +106,7 @@ footer {
 }
 
 .item-resultado {
-    background: #FFFFFF; /* Cor de fundo dos itens */
+    background: #FFFFFF; 
     border-radius: 0.4rem; /* Borda arredondada */
     padding: 0.5rem; /* Reduz o espaçamento interno */
     margin-bottom: 0.5rem; /* Reduz o espaçamento abaixo dos itens */
@@ -144,6 +144,7 @@ footer {
     
     .imagem {
      width: 70%; /* Define a largura da imagem */
+     margin-left: 15%;
     }
     .texto {
          flex: 1; /* Ocupa o espaço restante */
@@ -210,10 +211,11 @@ footer {
 @media (max-width: 768px) {
     .sidebar {
         width: 100px; /* Reduz a largura da sidebar em dispositivos menores */
+      
     }
 
     .main-content {
-        margin-left: 120px; /* Ajusta a margem do conteúdo principal */
+        margin-left: 120px; 
     }
 
     h1 {
@@ -241,6 +243,10 @@ footer {
     .exercicios{
         width: 80%;
         padding-top: 5%;
+        .imagem {
+            width: 100%; 
+            margin-left: 0%;
+           }
     }
 
 }
