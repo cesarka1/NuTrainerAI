@@ -12,52 +12,44 @@
         <h2>Menu</h2>
         <ul>
             <li><a href="index.html">Sobre</a></li>
-            <li><a href="dicas.html">Dicas Gerais</a></li>
-            <li><a href="consulta.html">Consulta de Treinos e Dietas</a></li>
+            <li><a href="dicas.html">Treinos & Dietas</a></li>
+            <li><a href="consulta.html">Consulta com o NuTrainerAi</a></li>
+            <li><a href="help.html">Ajuda</a></li>
         </ul>
     </div>
 
     <div class="main-content">
         <header>
-            <h1>Dicas Gerais</h1>
+            <h1>Treinos & Dietas</h1>
         </header>
         <main>
             <section>
-                <h2>Pesquise por Dicas</h2>
-                <input type="text" placeholder="Digite sua pergunta sobre treinos ou dietas">
+                <h2>Pesquise por treinos ou dietas</h2>
+                <input type="text" placeholder="Busque por um treino ou por uma dieta">
                 <button>Pesquisar</button>
                 <p></p>
             </section>
-            <section class="resultados-pesquisa">
-                <div class="item-resultado">
-                    <h2>
-                        <a href="#" target="_blank">Rebeca Andrade</a>
-                    </h2>
-                    <p class="descricao-meta">Rebeca Andrade é uma das maiores ginastas brasileiras de todos os tempos. Com sua força, elegância e determinação, ela conquistou o coração dos brasileiros e se tornou um verdadeiro ícone do esporte nacional.</p>
-                    <a href="https://pt.wikipedia.org/wiki/Rebeca_Andrade" target="_blank">Mais informações</a>
-                </div>
-                <div class="item-resultado">
-                    <h2>
-                        <a href="#" target="_blank">Rayssa Leal</a>
-                    </h2>
-                    <p class="descricao-meta">Rayssa Leal, a Fadinha, é uma skatista brasileira que conquistou o mundo com seu talento e carisma. Aos poucos anos, ela já coleciona títulos e inspira milhões de jovens.</p>
-                    <a href="https://pt.wikipedia.org/wiki/Rayssa_Leal" target="_blank">Mais informações</a>
-                </div>
-                
-                <div class="item-resultado">
-                    <h2>
-                        <a href="#" target="_blank">Beatriz Souza</a>
-                    </h2>
-                    <p class="descricao-meta">Beatriz Souza é uma judoca brasileira que se destacou nos Jogos Olímpicos, trazendo orgulho para o país. Sua força e técnica a colocaram entre as melhores do mundo.</p>
-                    <a href="https://pt.wikipedia.org/wiki/Beatriz_Souza" target="_blank">Mais informações</a>
-                </div>
-                
+            <section class="resultados-pesquisa" id="resultados">
+               
             </section>                
         </main>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modalTitulo"></h2>
+                <div id="modalConteudo"></div>
+            </div>
+        </div>
         <footer>
             <p>2024 - NuTrainerAi. Todos os direitos reservados</p>
             <p>Entre em contato pelo email: contato@nutrainerai.com</p>
         </footer>
     </div>
+
+ 
+    
+    <script src="../js/dados.js"></script>
+    <script src="../js/app.js"></script>
+    
 </body>
 </html>
