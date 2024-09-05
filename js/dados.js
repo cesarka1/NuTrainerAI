@@ -44,189 +44,189 @@ let exercicios = [
     {
         Nome: "Supino Declinado com Barra",
         Equipamento: "Barra",
-        Link: "",
+        Link: "https://www.docteur-fitness.com/wp-content/uploads/2021/12/developpe-decline-barre.gif",
         MusculoTrabalhado: "Peito",
         Descricao: "Focado na parte inferior do peitoral, realizado em um banco declinado para maximizar o trabalho dessa região."
     },
     {
         Nome: "Crucifixo com Cabos",
         Equipamento: "Cabos",
-        Link: "",
+        Link: "https://www.docteur-fitness.com/wp-content/uploads/2022/04/ecartes-poulie-vis-a-vis.gif",
         MusculoTrabalhado: "Peito",
         Descricao: "Exercício de isolamento realizado em pé com polias, promovendo uma contração muscular intensa do peitoral."
     },
     {
         Nome: "Peck Deck com Dropset",
         Equipamento: "Máquina",
-        Link: "",
+        Link: "https://www.docteur-fitness.com/wp-content/uploads/2000/06/pec-deck-butterfly-exercice-musculation.gif",
         MusculoTrabalhado: "Peito",
         Descricao: "Versão avançada do Peck Deck utilizando dropsets para aumentar a intensidade e hipertrofia muscular."
     },
     {
         Nome: "Agachamento Livre",
         Equipamento: "Barra",
-        Link: "",
+        Link: "https://www.docteur-fitness.com/wp-content/uploads/2022/08/air-squat.gif",
         MusculoTrabalhado: "Pernas",
         Descricao: "Exercício multiarticular que trabalha quadríceps, glúteos e posteriores de coxa, essencial para força e volume muscular."
     },
     {
-        Nome: "Leg Press",
+        Nome: "Leg Press 45º",
         Equipamento: "Máquina",
-        Link: "",
+        Link: "https://www.docteur-fitness.com/wp-content/uploads/2022/08/presse-a-cuisses-inclinee.gif",
         MusculoTrabalhado: "Pernas",
         Descricao: "Exercício em máquina que foca nos quadríceps, glúteos e posterior de coxa, com variação de carga."
     },
     {
         Nome: "Cadeira Extensora",
         Equipamento: "Máquina",
-        Link: "",
+        Link: "https://www.docteur-fitness.com/wp-content/uploads/2000/06/leg-extension-exercice-musculation.gif",
         MusculoTrabalhado: "Quadríceps",
         Descricao: "Isolamento dos quadríceps, proporcionando máxima ativação durante a extensão dos joelhos."
     },
     {
         Nome: "Cadeira Flexora",
         Equipamento: "Máquina",
-        Link: "",
+        Link: "https://www.docteur-fitness.com/wp-content/uploads/2022/02/leg-curl-assis-machine.gif",
         MusculoTrabalhado: "Posterior de Coxa",
         Descricao: "Trabalha de forma isolada os músculos posteriores da coxa, ideal para definição e força."
     },
     {
         Nome: "Elevação de Panturrilha",
         Equipamento: "Peso Corporal",
-        Link: "",
+        Link: "https://www.docteur-fitness.com/wp-content/uploads/2021/10/extension-mollets-sur-marche.gif",
         MusculoTrabalhado: "Panturrilha",
         Descricao: "Fortalece os músculos da panturrilha, realizado em pé ou sentado, com peso corporal ou carga adicional."
     },
     {
         Nome: "Agachamento Livre com Peso",
         Equipamento: "Barra",
-        Link: "",
+        Link: "https://www.docteur-fitness.com/wp-content/uploads/2021/11/homme-faisant-un-squat-avec-barre.gif",
         MusculoTrabalhado: "Pernas",
         Descricao: "Versão avançada do agachamento, adicionando carga para aumentar a resistência e intensidade."
     },
     {
         Nome: "Leg Press com Dropset",
         Equipamento: "Máquina",
-        Link: "",
+        Link: "https://www.docteur-fitness.com/wp-content/uploads/2022/08/presse-a-cuisses-inclinee.gif",
         MusculoTrabalhado: "Pernas",
         Descricao: "Leg press utilizando a técnica de dropset para maximizar o trabalho dos músculos das pernas."
     },
     {
         Nome: "Cadeira Extensora com Isometria",
         Equipamento: "Máquina",
-        Link: "",
+        Link: "https://www.docteur-fitness.com/wp-content/uploads/2000/06/leg-extension-exercice-musculation.gif",
         MusculoTrabalhado: "Quadríceps",
         Descricao: "Inclui uma pausa isométrica durante a extensão, aumentando a resistência e força muscular nos quadríceps."
     },
     {
         Nome: "Cadeira Flexora com Isometria",
         Equipamento: "Máquina",
-        Link: "",
+        Link: "https://www.docteur-fitness.com/wp-content/uploads/2022/02/leg-curl-assis-machine.gif",
         MusculoTrabalhado: "Posterior de Coxa",
         Descricao: "Exercício com pausa isométrica para aumentar a intensidade e trabalho dos músculos posteriores da coxa."
     },
     {
         Nome: "Levantamento Terra com Barra",
         Equipamento: "Barra",
-        Link: "",
+        Link: "https://www.docteur-fitness.com/wp-content/uploads/2021/12/souleve-de-terre.gif",
         MusculoTrabalhado: "Dorsais",
         Descricao: "Exercício composto que trabalha todo o corpo, especialmente a região lombar, glúteos e posteriores da coxa."
     },
     {
         Nome: "Puxada Aberta com Barra",
         Equipamento: "Barra",
-        Link: "",
+        Link: "https://www.docteur-fitness.com/wp-content/uploads/2021/11/tirage-vertical-poitrine.gif",
         MusculoTrabalhado: "Costas",
         Descricao: "Foca no aumento da largura das costas, principalmente o grande dorsal, com pegada aberta."
     },
     {
         Nome: "Remada Curvada com Barra",
         Equipamento: "Barra",
-        Link: "",
+        Link: "https://www.docteur-fitness.com/wp-content/uploads/2021/09/rowing-barre.gif",
         MusculoTrabalhado: "Costas",
         Descricao: "Exercício que trabalha toda a musculatura das costas, enfatizando os músculos da parte superior e média."
     },
     {
         Nome: "Remada Unilateral com Halteres",
         Equipamento: "Halteres",
-        Link: "",
+        Link: "https://www.docteur-fitness.com/wp-content/uploads/2021/08/rowing-haltere-un-bras.gif",
         MusculoTrabalhado: "Costas",
         Descricao: "Foca no trabalho unilateral dos músculos dorsais, ajudando na simetria e fortalecimento muscular."
     },
     {
         Nome: "Pulldown com Triângulo",
         Equipamento: "Máquina",
-        Link: "",
+        Link: "https://www.docteur-fitness.com/wp-content/uploads/2021/08/tirage-vertical-prise-serree.gif",
         MusculoTrabalhado: "Costas",
         Descricao: "Exercício realizado em máquina para fortalecer os músculos das costas com pegada neutra."
     },
     {
         Nome: "Desenvolvimento com Barra",
         Equipamento: "Barra",
-        Link: "",
+        Link: "https://www.docteur-fitness.com/wp-content/uploads/2000/08/developpe-militaire-exercice-musculation.gif",
         MusculoTrabalhado: "Ombros",
         Descricao: "Exercício composto para os ombros, realizado com barra, focando no deltoide anterior e medial."
     },
     {
         Nome: "Elevação Lateral com Halteres",
         Equipamento: "Halteres",
-        Link: "",
+        Link: "https://www.docteur-fitness.com/wp-content/uploads/2000/08/elevations-laterales-exercice-musculation.gif",
         MusculoTrabalhado: "Ombros",
         Descricao: "Isolamento para os ombros, especificamente o deltoide medial, melhorando a largura dos ombros."
     },
     {
         Nome: "Desenvolvimento com Halteres",
         Equipamento: "Halteres",
-        Link: "",
+        Link: "https://www.docteur-fitness.com/wp-content/uploads/2022/02/developpe-epaule-halteres.gif",
         MusculoTrabalhado: "Ombros",
         Descricao: "Trabalha toda a musculatura dos ombros, com maior liberdade de movimento do que com a barra."
     },
     {
         Nome: "Encolhimento com Halteres",
         Equipamento: "Halteres",
-        Link: "",
+        Link: "https://www.docteur-fitness.com/wp-content/uploads/2022/11/shrugs-avec-halteres.gif",
         MusculoTrabalhado: "Trapézio",
         Descricao: "Focado no desenvolvimento do trapézio, realizado com elevação dos ombros segurando halteres."
     },
     {
         Nome: "Elevação Frontal com Halteres",
         Equipamento: "Halteres",
-        Link: "",
+        Link: "https://www.docteur-fitness.com/wp-content/uploads/2000/08/elevations-frontales-exercice-musculation.gif",
         MusculoTrabalhado: "Ombros",
         Descricao: "Isola o deltoide anterior, levantando halteres à frente do corpo para fortalecimento."
     },
     {
         Nome: "Tríceps Testa com Barra",
         Equipamento: "Barra",
-        Link: "",
+        Link: "https://www.docteur-fitness.com/wp-content/uploads/2000/09/barre-front.gif",
         MusculoTrabalhado: "Tríceps",
         Descricao: "Exercício de isolamento que trabalha o tríceps, realizado deitado e com a barra movimentada em direção à testa."
     },
     {
         Nome: "Tríceps Pulley",
         Equipamento: "Cabos",
-        Link: "",
+        Link: "https://www.docteur-fitness.com/wp-content/uploads/2022/04/extension-triceps-poulie-haute.gif",
         MusculoTrabalhado: "Tríceps",
         Descricao: "Trabalha o tríceps através da extensão do cotovelo, usando polia alta."
     },
     {
         Nome: "Rosca Direta com Barra",
         Equipamento: "Barra",
-        Link: "",
+        Link: "https://www.docteur-fitness.com/wp-content/uploads/2021/09/curl-barre.gif",
         MusculoTrabalhado: "Bíceps",
         Descricao: "Exercício clássico para os bíceps, levantando a barra diretamente para frente do corpo."
     },
     {
         Nome: "Rosca Alternada com Halteres",
         Equipamento: "Halteres",
-        Link: "",
+        Link: "https://www.docteur-fitness.com/wp-content/uploads/2022/08/curl-biceps-avec-halteres-alterne.gif",
         MusculoTrabalhado: "Bíceps",
         Descricao: "Rosca com halteres, alternando os braços para uma melhor simetria e controle muscular."
     },
     {
         Nome: "Rosca Concentrada",
         Equipamento: "Halteres",
-        Link: "",
+        Link: "https://www.docteur-fitness.com/wp-content/uploads/2021/09/curl-concentre.gif",
         MusculoTrabalhado: "Bíceps",
         Descricao: "Exercício de isolamento que foca no pico do bíceps, realizado com o braço apoiado."
     },
