@@ -61,29 +61,36 @@ function abrirModal(titulo, conteudo) {
     document.getElementById('modalTitulo').innerText = titulo;
 
     // Formata o conteúdo do modal
-    let conteudoHTML = '<ul>';
+    let conteudoHTML = '<div class="flex-container">';
     conteudo.forEach(item => {
-        conteudoHTML += `<div class="item-resultado"><strong>${item.Nome}
-        </strong>: 
-        
-        ${item.Series ? `<p><strong>Series:</strong> ${item.Series}</p>` : ''}
-        ${item.Repeticoes ? `<p><strong>Repeticoes:</strong> ${item.Repeticoes}</p>` : ''}
-        ${item.Descanso ? `<p><strong>Descanso:</strong> ${item.Descanso}</p>` : ''}
-        ${item.Equipamento ? `<p><strong>Equipamento:</strong> ${item.Equipamento}</p>` : ''}
+        conteudoHTML += 
+        `<div class="item-resultado item-modal">
+            <strong>${item.Nome} <div>${item.Link ? `<img  class="imagem"  src="${item.Link}" alt="${item.Nome}">`: ''} </div></strong> 
+            
+                <div class="texto">
+                    ${item.Series ? `<p><strong>Series:</strong> ${item.Series}</p>` : ''}
+                    ${item.Repeticoes ? `<p><strong>Repeticoes:</strong> ${item.Repeticoes}</p>` : ''}
+                    ${item.Descanso ? `<p><strong>Descanso:</strong> ${item.Descanso}</p>` : ''}
+                    ${item.Equipamento ? `<p><strong>Equipamento:</strong> ${item.Equipamento}</p>` : ''}
 
-        
-        ${item.Alimentos ? `<p><strong>Alimentos:</strong> ${item.Alimentos}</p>` : ''}
-        ${item.Calorias ? `<p><strong>Calorias:</strong> ${item.Calorias}</p>` : ''}
-        ${item.Macros ? `<p><strong>Macros:</strong> 
-            <strong>Carboidratos: </strong>${item.Macros.carboidratos}
-              <strong>Proteinas: </strong>${item.Macros.proteinas}
-                <strong>Gorduras: </strong>${item.Macros.gorduras}
-            </p>` : ''}
-        </div>`
+
+                    ${item.Alimentos ? `<p><strong>Alimentos:</strong> ${item.Alimentos}</p>` : ''}
+                    ${item.Calorias ? `<p><strong>Calorias:</strong> ${item.Calorias}</p>` : ''}
+                    ${item.Macros ? `<p><strong>Macros:</strong> 
+                        <strong>Carboidratos: </strong>${item.Macros.carboidratos}
+                            <strong>Proteinas: </strong>${item.Macros.proteinas}
+                            <strong>Gorduras: </strong>${item.Macros.gorduras}
+                        </p>` : ''}
+                </div>
+                
+            
+            
+        </div>
+        `
        
         ;
     });
-    conteudoHTML += '</ul>';
+    conteudoHTML += '</div>';
 
     document.getElementById('modalConteudo').innerHTML = conteudoHTML;
     document.getElementById('myModal').style.display = "block";

@@ -19,6 +19,7 @@ body {
     padding: 20px;
     position: fixed;
     height: 100%;
+    transition: width 0.3s; /* Transição suave para a sidebar */
 }
 
 .sidebar h2 {
@@ -43,6 +44,7 @@ body {
 .main-content {
     margin-left: 240px; /* Ajustado para o novo tamanho da sidebar */
     padding: 20px;
+    transition: margin-left 0.3s; /* Transição suave para o conteúdo principal */
 }
 
 /* Adicionando espaçamento entre a sidebar e os componentes */
@@ -103,27 +105,35 @@ footer {
     margin-bottom: 20px; /* Espaço abaixo da grade */
 }
 
-
 .item-resultado {
     background: #FFFFFF; /* Cor de fundo dos itens */
-    border-radius: 0.6rem; /* Borda arredondada */
-    padding: 1rem; /* Espaçamento interno */
-    margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
+    border-radius: 0.4rem; /* Borda arredondada */
+    padding: 0.5rem; /* Reduz o espaçamento interno */
+    margin-bottom: 0.5rem; /* Reduz o espaçamento abaixo dos itens */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
-
-    h2 {
-        font-size: 1.5rem; /* Tamanho da fonte */
-        color: #222831; /* Cor do texto */
-    }
-
-    a {
-        text-decoration: none; /* Remove o sublinhado padrão dos links */
-        color: #30475E; /* Cor do texto dos links */
-        hover {
-            text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
-        }
-    }
+    display: flex;
+    flex-direction: column; /* Alinha os itens verticalmente */
+    justify-content: flex-start; /* Alinha os itens ao início */
 }
+
+.item-resultado .texto {
+    margin-top: 0.5rem; /* Espaçamento entre o título e o texto */
+}
+
+.item-resultado h2 {
+    font-size: 1.5rem; /* Tamanho da fonte */
+    color: #222831; /* Cor do texto */
+}
+
+.item-resultado a {
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    color: #30475E; /* Cor do texto dos links */
+}
+
+.item-resultado a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
 
 /* Modal */
 
@@ -142,10 +152,29 @@ footer {
 
 .modal-content {
     background-color: #dbf3eb;
-    margin: 15% auto; /* Centraliza o modal */
-    padding: 20px;
+    margin: 5% auto; /* Reduz a margem superior e inferior */
+    padding: 10px; /* Reduz o padding */
     border: 1px solid #888;
-    width: 80%; /* Largura do modal */
+    width: 90%; /* Largura do modal */
+    max-width: 1000px; /* Limite máximo da largura */
+}
+
+.flex-container{
+    display: flex;
+    gap: 10px;
+    padding-left: 10%;
+    flex-wrap: wrap;
+
+}
+
+.item-modal{
+   width: 40%;
+   .imagem {
+    width: 70%; /* Define a largura da imagem */
+   }
+   .texto {
+        flex: 10; /* Ocupa o espaço restante */
+    }
 }
 
 .close {
@@ -161,3 +190,35 @@ footer {
     text-decoration: none;
     cursor: pointer;
 }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100px; /* Reduz a largura da sidebar em dispositivos menores */
+    }
+
+    .main-content {
+        margin-left: 120px; /* Ajusta a margem do conteúdo principal */
+    }
+
+    h1 {
+        font-size: 2rem; /* Ajusta o tamanho do título */
+    }
+
+    .item-resultado {
+        flex-direction: column; /* Alinha os itens verticalmente */
+    }
+
+    .flex-container{
+        display: block;
+        width: 100%;
+        .imagem {
+            width: 100%; /* Imagem ocupa 100% em dispositivos menores */
+        }
+    
+    }
+
+    .item-modal{
+        width: 75%;
+        padding-top: 5%;
+    }

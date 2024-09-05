@@ -10,35 +10,40 @@ let treinos = [
                 Series: 3,
                 Repeticoes: "10-12",
                 Descanso: 60,
-                Equipamento: "Barra e Halteres"
+                Equipamento: "Barra e Halteres",
+                Link: "https://www.docteur-fitness.com/wp-content/uploads/2019/08/developpe-couche.gif"
             },
             {
                 Nome: "Supino Inclinado com Halteres",
                 Series: 3,
                 Repeticoes: "10-12",
                 Descanso: 60,
-                Equipamento: "Halteres"
+                Equipamento: "Halteres",
+                Link: "https://www.docteur-fitness.com/wp-content/uploads/2000/06/developpe-incline-halteres-exercice-musculation.gif"
             },
             {
                 Nome: "Flexões",
                 Series: 3,
                 Repeticoes: "8-10",
                 Descanso: 60,
-                Equipamento: "Peso Corporal"
+                Equipamento: "Peso Corporal",
+                Link: "https://www.docteur-fitness.com/wp-content/uploads/2020/10/pompe-musculation.gif"
             },
             {
                 Nome: "Peck Deck",
                 Series: 3,
                 Repeticoes: "10-12",
                 Descanso: 60,
-                Equipamento: "Máquina"
+                Equipamento: "Máquina",
+                Link: "https://www.docteur-fitness.com/wp-content/uploads/2000/06/pec-deck-butterfly-exercice-musculation.gif"
             },
             {
                 Nome: "Crossover",
                 Series: 3,
                 Repeticoes: "10-12",
                 Descanso: 60,
-                Equipamento: "Cabos"
+                Equipamento: "Cabos",
+                Link: "https://www.docteur-fitness.com/wp-content/uploads/2000/06/ecarte-poulie-vis-a-vis-exercice-musculation-pectoraux.gif"
             }
         ]
     },
@@ -54,13 +59,16 @@ let treinos = [
                 Repeticoes: "8-10",
                 Descanso: 90,
                 Equipamento: "Barra"
+                ,
+                Link: "https://www.docteur-fitness.com/wp-content/uploads/2019/08/developpe-couche.gif"
             },
             {
                 Nome: "Supino Inclinado com Halteres",
                 Series: 4,
                 Repeticoes: "8-10",
                 Descanso: 90,
-                Equipamento: "Halteres"
+                Equipamento: "Halteres",
+                Link: "https://www.docteur-fitness.com/wp-content/uploads/2000/06/developpe-incline-halteres-exercice-musculation.gif"
             },
             {
                 Nome: "Crucifixo Inclinado com Halteres",
@@ -68,6 +76,8 @@ let treinos = [
                 Repeticoes: "10-12",
                 Descanso: 60,
                 Equipamento: "Halteres"
+                ,
+                Link: "https://www.docteur-fitness.com/wp-content/uploads/2022/09/ecartes-incline-avec-halteres.gif"
             },
             {
                 Nome: "Peck Deck",
@@ -75,13 +85,16 @@ let treinos = [
                 Repeticoes: "10-12",
                 Descanso: 60,
                 Equipamento: "Máquina"
+                ,
+                Link: "https://www.docteur-fitness.com/wp-content/uploads/2000/06/pec-deck-butterfly-exercice-musculation.gif"
             },
             {
                 Nome: "Crossover",
                 Series: 4,
                 Repeticoes: "10-12",
                 Descanso: 60,
-                Equipamento: "Cabos"
+                Equipamento: "Cabos",
+                Link: "https://www.docteur-fitness.com/wp-content/uploads/2000/06/ecarte-poulie-vis-a-vis-exercice-musculation-pectoraux.gif"
             }
         ]
     },
