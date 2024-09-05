@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NuTrainerAi - Aplicação de Treinos e Dietas</title>
+    <title>Dicas Gerais - NuTrainerAi</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
 </head>
@@ -22,19 +22,36 @@
 
     <div class="main-content">
         <header>
-            <h1>Bem-vindo ao NuTrainerAi</h1>
+            <h1>Dietas</h1>
         </header>
         <main>
-            <section id="sobre">
-                <h2>Sobre o NuTrainerAi</h2>
-                <p>O NuTrainerAi é uma aplicação dedicada a fornecer dicas e consultas sobre treinos e dietas personalizadas. Aqui, você pode encontrar informações valiosas para melhorar seu desempenho e saúde.</p>
-                <img src="../images/banner.jpeg" alt="">
+            <section>
+                <h2>Pesquise por dietas</h2>
+                <div class="search-container">
+                    <input type="text" placeholder="Busque por um treino ou por uma dieta">
+                    <button>Pesquisar</button>
+                 </div>
+                <p></p>
             </section>
+            <section class="resultados-pesquisa flex-container" id="resultados">
+               
+            </section>                
         </main>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modalTitulo"></h2>
+                <div id="modalConteudo"></div>
+            </div>
+        </div>
         <footer>
             <p>2024 - NuTrainerAi. Todos os direitos reservados</p>
             <p>Entre em contato pelo email: contato@nutrainerai.com</p>
         </footer>
     </div>
+
+    <script src="../js/dados.js"></script>
+    <script src="../js/app.js"></script>
+    
 </body>
 </html>

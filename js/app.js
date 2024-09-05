@@ -16,6 +16,9 @@ function criarElementoResultado(titulo, descricao, grupoMuscular, nivel, objetiv
 function gerarResultados() {
     let resultadosHTML = '';
 
+    if (window.location.pathname === "/views/treinos.html") {
+        
+    
     // Adicionando treinos à seção
     treinos.forEach(treino => {
         resultadosHTML += criarElementoResultado(
@@ -28,6 +31,8 @@ function gerarResultados() {
             treino.Exercicios // Passa o array de objetos
         );
     });
+}
+else{
 
     // Adicionando dietas à seção
     dietas.forEach(dieta => {
@@ -41,6 +46,8 @@ function gerarResultados() {
             dieta.Refeicoes // Passa o array de objetos
         );
     });
+}
+
 
     // Inserindo o HTML gerado na seção
     document.getElementById('resultados').innerHTML = resultadosHTML;

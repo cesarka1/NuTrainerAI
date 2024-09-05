@@ -1,6 +1,6 @@
 function criarElementoResultadoExercicio(exercicio) {
     return `
-        <div class="item-resultado exercicios">
+        <div class="item-resultado">
             <h1>
                 <a href="#" class="mais-informacoes" data-titulo="${exercicio.Nome}" data-conteudo='${JSON.stringify(exercicio)}'>${exercicio.Nome}</a>
             </h1>
