@@ -29,6 +29,8 @@ Disponivel em: https://cesarka1.github.io/NuTrainerAI/
 
 - **Sugestões de Dieta:** Planos de dieta adaptados aos objetivos do usuário.
 ![alt text](images/dietas.png)
+
+## Implementação futura Pós Imerssão
 - **Consultoria Personalizada:** Interação com a inteligência do Gemini para tirar dúvidas e oferecer recomendações personalizadas.(Ainda não está funcionado)
 ![alt text](images/Consulta.png)
 
