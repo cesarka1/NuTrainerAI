@@ -1,343 +1,330 @@
 /* styles.css */
 
 /* Importa a fonte Chakra Petch do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+
 
 /* Estiliza o corpo da página */
 body {
-    font-family: "Chakra Petch", sans-serif;
-    background-color: #dbf3eb; /* Cor de fundo */
-    margin: 0;
-    padding: 0;
+  font-family: "Chakra Petch", sans-serif;
+  background-color: #dbf3eb; /* Cor de fundo */
+  margin: 0;
+  padding: 0;
 }
 
 /* Sidebar */
 .sidebar {
-    width: 220px; /* Aumentado para melhor espaçamento */
-    background-color: #30475E;
-    color: white;
-    padding: 20px;
-    position: fixed;
-    height: 100%;
-    transition: width 0.3s; /* Transição suave para a sidebar */
+  width: 220px; /* Aumentado para melhor espaçamento */
+  background-color: #30475e;
+  color: white;
+  padding: 20px;
+  position: fixed;
+  height: 100%;
+  transition: width 0.3s; /* Transição suave para a sidebar */
 }
 
 .sidebar h2 {
-    text-align: center;
+  text-align: center;
 }
 
 .sidebar ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 .sidebar ul li {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 .sidebar ul li a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 /* Estiliza a seção principal */
 .main-content {
-    margin-left: 240px; /* Ajustado para o novo tamanho da sidebar */
-    padding: 20px;
-    transition: margin-left 0.3s; /* Transição suave para o conteúdo principal */
+  margin-left: 240px; /* Ajustado para o novo tamanho da sidebar */
+  padding: 20px;
+  transition: margin-left 0.3s; /* Transição suave para o conteúdo principal */
 }
 
 /* Adicionando espaçamento entre a sidebar e os componentes */
 .main-content > header,
 .main-content > main,
 .main-content > footer {
-    margin-left: 20px; /* Espaço entre a sidebar e os componentes */
+  margin-left: 20px; /* Espaço entre a sidebar e os componentes */
 }
 
-
-.about{
-    body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        margin: 20px;
-        background-color: #f4f4f4;
-       text-align: center;
-       justify-content: flex-start; 
-       align-items: center;
-
-    }
-    h1, h2 {
-        color: #333;
-    }
-    h1 {
-        text-align: center;
-    }
-    section {
-        background: #fff;
-        padding: 20px;
-        margin: 10px 0;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-    
+.about {
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  h1,
+  h2 {
+    color: #333;
+  }
+  h1 {
+    text-align: center;
+  }
+  section {
+    background: #fff;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
 }
-
 
 /* Estiliza os títulos h1 */
 h1 {
-    font-size: 4rem;
-    color: #222831;
-    text-align: center;
+  font-size: 4rem;
+  color: #222831;
+  text-align: center;
 }
 
 /* Estiliza os inputs e botões */
-input[type="text"], input[type="number"], select {
-    width: calc(100% - 22px);
-    padding: 10px;
-    margin-bottom: 15px; /* Aumentado para mais espaço */
-    border: 1px solid #ced4da; /* Borda padrão */
-    border-radius: 4px;
+input[type="text"],
+input[type="number"],
+select {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 15px; /* Aumentado para mais espaço */
+  border: 1px solid #ced4da; /* Borda padrão */
+  border-radius: 4px;
 }
 
 section {
-    display: flex; /* Usa Flexbox para layout */
-    flex-direction: column; /* Alinha os itens na vertical */
-    align-items: center; /* Centraliza os itens horizontalmente */
-    margin-bottom: 3rem; /* Espaçamento abaixo de cada seção */
-    justify-content: center;
+  display: flex; /* Usa Flexbox para layout */
+  flex-direction: column; /* Alinha os itens na vertical */
+  align-items: center; /* Centraliza os itens horizontalmente */
+  margin-bottom: 3rem; /* Espaçamento abaixo de cada seção */
+  justify-content: center;
 }
 
-
 .search-container {
-    display: flex; /* Usa Flexbox para layout */
-    flex-direction: column; /* Alinha os itens na vertical */
-    align-items: center; /* Centraliza os itens horizontalmente */
-    width: 100%; /* Ajuste a largura do contêiner */
-    max-width: 30rem; /* Define uma largura máxima para o contêiner */
-    margin: 0 auto; /* Centraliza o contêiner */
+  display: flex; /* Usa Flexbox para layout */
+  flex-direction: column; /* Alinha os itens na vertical */
+  align-items: center; /* Centraliza os itens horizontalmente */
+  width: 100%; /* Ajuste a largura do contêiner */
+  max-width: 30rem; /* Define uma largura máxima para o contêiner */
+  margin: 0 auto; /* Centraliza o contêiner */
 }
 
 section button {
-    padding: 0.8rem 1.2rem; /* Espaçamento interno do botão */
-    border: none; /* Remove a borda padrão */
-    border-radius: 1.5rem; /* Borda arredondada */
-    background-color: #30475E; /* Cor de fundo do botão */
-    color: #F5F7F8; /* Cor do texto do botão */
-    font-size: 1rem; /* Tamanho da fonte */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
-
+  padding: 0.8rem 1.2rem; /* Espaçamento interno do botão */
+  border: none; /* Remove a borda padrão */
+  border-radius: 1.5rem; /* Borda arredondada */
+  background-color: #30475e; /* Cor de fundo do botão */
+  color: #f5f7f8; /* Cor do texto do botão */
+  font-size: 1rem; /* Tamanho da fonte */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
 }
 
 button:hover {
-    background-color: #222831; /* Cor ao passar o mouse */
+  background-color: #222831; /* Cor ao passar o mouse */
 }
 
 .results {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 /* Rodapé */
 footer {
-    text-align: center;
-    margin-top: 20px;
-    color: #45474B;
-    padding: 10px 0; /* Espaço no topo e na base do rodapé */
+  text-align: center;
+  margin-top: 20px;
+  color: #45474b;
+  padding: 10px 0; /* Espaço no topo e na base do rodapé */
 }
 
 /* Estilo para os campos 2x2 */
 .fields-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
-    gap: 20px; /* Espaçamento entre os campos */
-    margin-bottom: 20px; /* Espaço abaixo da grade */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+  gap: 20px; /* Espaçamento entre os campos */
+  margin-bottom: 20px; /* Espaço abaixo da grade */
 }
 
 .item-resultado {
-    background: #FFFFFF; 
-    border-radius: 0.4rem; /* Borda arredondada */
-    padding: 0.5rem; /* Reduz o espaçamento interno */
-    margin-bottom: 0.5rem; /* Reduz o espaçamento abaixo dos itens */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
-    display: flex;
-    flex-direction: column; /* Alinha os itens verticalmente */
-    justify-content: flex-start; /* Alinha os itens ao início */
+  background: #ffffff;
+  border-radius: 0.4rem; /* Borda arredondada */
+  padding: 0.5rem; /* Reduz o espaçamento interno */
+  margin-bottom: 0.5rem; /* Reduz o espaçamento abaixo dos itens */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  display: flex;
+  flex-direction: column; /* Alinha os itens verticalmente */
+  justify-content: flex-start; /* Alinha os itens ao início */
 
-    width: 30%; 
-    .h2{
-       text-align: center; 
-    }
-    
-    .imagem {
-     width: 70%; /* Define a largura da imagem */
-     margin-left: 15%;
-    }
-    .texto {
-         flex: 1; /* Ocupa o espaço restante */
-     }  
+  width: 30%;
+  .h2 {
+    text-align: center;
+  }
+
+  .imagem {
+    width: 70%; /* Define a largura da imagem */
+    margin-left: 15%;
+  }
+  .texto {
+    flex: 1; /* Ocupa o espaço restante */
+  }
 }
 
 .item-resultado .texto {
-    margin-top: 0.5rem; /* Espaçamento entre o título e o texto */
+  margin-top: 0.5rem; /* Espaçamento entre o título e o texto */
 }
 
 .item-resultado h2 {
-    font-size: 1.5rem; /* Tamanho da fonte */
-    color: #222831; /* Cor do texto */
+  font-size: 1.5rem; /* Tamanho da fonte */
+  color: #222831; /* Cor do texto */
 }
 
 .item-resultado a {
-    text-decoration: none; /* Remove o sublinhado padrão dos links */
-    color: #30475E; /* Cor do texto dos links */
+  text-decoration: none; /* Remove o sublinhado padrão dos links */
+  color: #30475e; /* Cor do texto dos links */
 }
 
 .item-resultado a:hover {
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+  text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
 
-.item-Modal{
-    background: #FFFFFF; 
-    border-radius: 0.4rem; /* Borda arredondada */
-    padding: 0.5rem; /* Reduz o espaçamento interno */
-    margin-bottom: 0.5rem; /* Reduz o espaçamento abaixo dos itens */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
-    p{
-        font-size: 20; /* Ocupa o espaço restante */
-    } 
-
+.item-Modal {
+  background: #ffffff;
+  border-radius: 0.4rem; /* Borda arredondada */
+  padding: 0.5rem; /* Reduz o espaçamento interno */
+  margin-bottom: 0.5rem; /* Reduz o espaçamento abaixo dos itens */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  p {
+    font-size: 20; /* Ocupa o espaço restante */
+  }
 }
-
 
 /* Modal */
 
 .modal {
-    display: none; /* Escondido por padrão */
-    position: fixed; /* Fica na tela inteira */
-    z-index: 1; /* Fica acima de outros elementos */
-    left: 0;
-    top: 0;
-    width: 100%; /* Largura total */
-    height: 100%; /* Altura total */
-    overflow: auto; /* Habilita rolagem se necessário */
-    background-color: rgb(0,0,0); /* Cor de fundo */
-    background-color: rgba(0,0,0,0.4); /* Fundo com transparência */
+  display: none; /* Escondido por padrão */
+  position: fixed; /* Fica na tela inteira */
+  z-index: 1; /* Fica acima de outros elementos */
+  left: 0;
+  top: 0;
+  width: 100%; /* Largura total */
+  height: 100%; /* Altura total */
+  overflow: auto; /* Habilita rolagem se necessário */
+  background-color: rgb(0, 0, 0); /* Cor de fundo */
+  background-color: rgba(0, 0, 0, 0.4); /* Fundo com transparência */
 }
 
 .modal-content {
-    background-color: #dbf3eb;
-    margin: 5% auto; /* Reduz a margem superior e inferior */
-    padding: 10px; /* Reduz o padding */
-    border: 1px solid #888;
-    width: 90%; /* Largura do modal */
-    max-width: 1000px; /* Limite máximo da largura */
+  background-color: #dbf3eb;
+  margin: 5% auto; /* Reduz a margem superior e inferior */
+  padding: 10px; /* Reduz o padding */
+  border: 1px solid #888;
+  width: 90%; /* Largura do modal */
+  max-width: 1000px; /* Limite máximo da largura */
 }
 
-.flex-container{
-    display: flex;
-    gap: 10px;
-    padding-left: 10%;
-    flex-wrap: wrap;
-
+.flex-container {
+  display: flex;
+  gap: 10px;
+  padding-left: 10%;
+  flex-wrap: wrap;
 }
 
-.item-modal{
-   width: 40%;
-   .imagem {
+.item-modal {
+  width: 40%;
+  .imagem {
     width: 70%; /* Define a largura da imagem */
-   }
-   .texto {
-        flex: 10; /* Ocupa o espaço restante */
-    }
+  }
+  .texto {
+    flex: 10; /* Ocupa o espaço restante */
+  }
 }
 
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .sidebar {
-        width: 90%; /* Reduz a largura da sidebar em dispositivos menores */
-        position: relative;
-        
-        
+  .sidebar {
+    width: 90%; /* Reduz a largura da sidebar em dispositivos menores */
+    position: relative;
+  }
 
+  .slidebar-items {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 10px;
+
+    li {
+      width: 30%; /* Cada item ocupará 20% da largura disponível */
+      margin: 10px;
+      text-align: center;
     }
+  }
+  .main-content > header,
+  .main-content > main,
+  .main-content > footer {
+    margin-left: 0px; /* Espaço entre a sidebar e os componentes */
+  }
 
-    .slidebar-items{
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        
-        align-items: flex-start;
-        flex-wrap: wrap;
-        padding: 20px;
-        gap: 10px;
+  .main-content {
+    margin-left: 0px;
+  }
 
-        li{
-            width: 30%; /* Cada item ocupará 20% da largura disponível */
-            margin: 10px;
-            text-align: center;
-        }       
-               
+  h1 {
+    font-size: 2rem; /* Ajusta o tamanho do título */
+  }
+
+  .item-resultado {
+    flex-direction: column; /* Alinha os itens verticalmente */
+  }
+
+  .flex-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-left: 0%;
+    .imagem {
+      margin-left: 0%;
+      width: 100%; /* Imagem ocupa 100% em dispositivos menores */
     }
-        .main-content > header,
-    .main-content > main,
-    .main-content > footer {
-        margin-left: 0px; /* Espaço entre a sidebar e os componentes */
-    }
-
-    .main-content {
-        margin-left: 0px; 
-    }
-
-    h1 {
-        font-size: 2rem; /* Ajusta o tamanho do título */
-    }
-
     .item-resultado {
-        flex-direction: column; /* Alinha os itens verticalmente */
+      width: 70%;
     }
+  }
 
-    .flex-container{
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        padding-left: 0%;
-        .imagem {
-            margin-left: 0%;
-            width: 100%; /* Imagem ocupa 100% em dispositivos menores */
-        }
-        .item-resultado{
-            width: 70%;
-        }
-        
+  .item-modal {
+    width: 80%;
+    padding-top: 5%;
+  }
+
+  .exercicios {
+    width: 80%;
+    padding-top: 5%;
+    .imagem {
+      width: 100%;
+      margin-left: 0%;
     }
-
-
-
-    .item-modal{
-        width: 80%;
-        padding-top: 5%;
-    }
-
-    .exercicios{
-        width: 80%;
-        padding-top: 5%;
-        .imagem {
-            width: 100%; 
-            margin-left: 0%;
-           }
-    }
-    
-
+  }
 }

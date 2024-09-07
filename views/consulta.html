@@ -1,71 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Consulta de Treinos e Dietas - NuTrainerAi</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
-</head>
-<body>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link
+      rel="shortcut icon"
+      href="../images/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
     <div class="sidebar">
-        <h2>Menu</h2>
-        <ul class="slidebar-items">
-            <li><a href="../index.html">Sobre</a></li>
-            <li><a href="exercicios.html">Exercícios</a></li>
-            <li><a href="treinos.html">Treinos</a></li>
-            <li><a href="dietas.html">Dietas</a></li>
-            <li><a href="consulta.html">NuTrainerAi</a></li>
-            <li><a href="help.html">Ajuda</a></li>
-        </ul>
+      <h2>Menu</h2>
+      <ul class="slidebar-items">
+        <li><a href="../index.html">Sobre</a></li>
+        <li><a href="exercicios.html">Exercícios</a></li>
+        <li><a href="treinos.html">Treinos</a></li>
+        <li><a href="dietas.html">Dietas</a></li>
+        <li><a href="consulta.html">NuTrainerAi</a></li>
+        <li><a href="help.html">Ajuda</a></li>
+      </ul>
     </div>
 
     <div class="main-content">
-        <header>
-            <h1>Consulta com o NuTrainerAi</h1>
-        </header>
-        <main>
-            <section>
-                <h2>Preencha suas informações</h2>
-                <form id="consultaForm">
-                    <label for="apiKey">Chave de API Gemini:</label>
-                    <input type="text" id="apiKey" placeholder="Insira sua chave de API do Gemini (Consulte a seção Ajuda para aprender como gerar)" required>
+      <header>
+        <h1>Consulta com o NuTrainerAi</h1>
+      </header>
+      <main>
+        <section>
+          <h2>Preencha suas informações</h2>
+          <form id="consultaForm">
+            <label for="apiKey">Chave de API Gemini:</label>
+            <input
+              type="text"
+              id="apiKey"
+              placeholder="Insira sua chave de API do Gemini (Consulte a seção Ajuda para aprender como gerar)"
+              required
+            />
 
-                    <label for="pergunta">Pergunta:</label>
-                    <input type="text" id="pergunta" placeholder="Digite sua pergunta" required>
+            <label for="pergunta">Pergunta:</label>
+            <input
+              type="text"
+              id="pergunta"
+              placeholder="Digite sua pergunta"
+              required
+            />
 
-                    <div class="fields-grid">
-                        <div>
-                            <label for="sexo">Sexo:</label>
-                            <select id="sexo">
-                                <option value="masculino">Masculino</option>
-                                <option value="feminino">Feminino</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="idade">Idade:</label>
-                            <input type="number" id="idade" />
-                        </div>
-                        <div>
-                            <label for="peso">Peso:</label>
-                            <input type="number" id="peso" />
-                        </div>
-                        <div>
-                            <label for="altura">Altura:</label>
-                            <input type="number" id="altura" />
-                        </div>
-                    </div>
-                    <button type="submit">Consultar</button>
-                </form>
-                <div class="results" id="results"></div>
-            </section>
-        </main>
-        <footer>
-            <p>2024 - NuTrainerAi. Todos os direitos reservados</p>
-            <p>Entre em contato pelo email: cesarkauan.jobs@hotmail.com</p>
-        </footer>
+            <div class="fields-grid">
+              <div>
+                <label for="sexo">Sexo:</label>
+                <select id="sexo">
+                  <option value="masculino">Masculino</option>
+                  <option value="feminino">Feminino</option>
+                </select>
+              </div>
+              <div>
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" />
+              </div>
+              <div>
+                <label for="peso">Peso:</label>
+                <input type="number" id="peso" />
+              </div>
+              <div>
+                <label for="altura">Altura:</label>
+                <input type="number" id="altura" />
+              </div>
+            </div>
+            <button type="submit">Consultar</button>
+          </form>
+          <div class="results" id="results"></div>
+        </section>
+      </main>
+      <footer>
+        <p>2024 - NuTrainerAi. Todos os direitos reservados</p>
+        <p>Entre em contato pelo email: cesarkauan.jobs@hotmail.com</p>
+      </footer>
     </div>
 
     <script type="module" src="script.js"></script>
-</body>
+  </body>
 </html>
