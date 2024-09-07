@@ -8,52 +8,74 @@ function criarElementoResultado(
   exerciciosOuPratos
 ) {
   return `
-        <div class="item-resultado">
-            <h2>
-                <a href="#" class="mais-informacoes" data-titulo="${titulo}" data-conteudo='${JSON.stringify(
+      <div class="item-resultado">
+        <h2>
+          <a href="#" class="mais-informacoes" data-titulo="${titulo}" data-conteudo='${JSON.stringify(
     exerciciosOuPratos
-  )}'>${titulo}</a>
-            </h2>
-            <p class="descricao-meta">${descricao}</p>
-            ${
-              grupoMuscular
-                ? `<p><strong>Grupo Muscular:</strong> ${grupoMuscular}</p>`
-                : ""
-            }
-            ${nivel ? `<p><strong>Nível:</strong> ${nivel}</p>` : ""}
-            ${objetivo ? `<p><strong>Objetivo:</strong> ${objetivo}</p>` : ""}
-            <a href="#" class="mais-informacoes" data-titulo="${titulo}" data-conteudo='${JSON.stringify(
+  )}'>
+            ${titulo}
+          </a>
+        </h2>
+        <p class="descricao-meta">${descricao}</p>
+        ${
+          grupoMuscular
+            ? `<p><strong>Grupo Muscular:</strong> ${grupoMuscular}</p>`
+            : ""
+        }
+        ${nivel ? `<p><strong>Nível:</strong> ${nivel}</p>` : ""}
+        ${objetivo ? `<p><strong>Objetivo:</strong> ${objetivo}</p>` : ""}
+        <a href="#" class="mais-informacoes" data-titulo="${titulo}" data-conteudo='${JSON.stringify(
     exerciciosOuPratos
-  )}'>Mais informações</a>
-        </div>
+  )}'>
+          Mais informações
+        </a>
+      </div>
     `;
 }
 
-function gerarResultados(resultados) {
+function gerarResultadosTreinos(resultados) {
   let resultadosHTML = "";
 
   resultados.forEach((item) => {
-    if (window.location.pathname === "/NuTrainerAI/views/treinos.html") {
-      resultadosHTML += criarElementoResultado(
-        item.Titulo,
-        item.Descricao,
-        item.GrupoMuscular,
-        item.Nivel,
-        "", // Objetivo não se aplica a treinos
-        "#", // Link placeholder - substituir por um link real
-        item.Exercicios // Passa o array de exercícios
-      );
-    } else {
-      resultadosHTML += criarElementoResultado(
-        item.Titulo,
-        item.Descricao,
-        "", // Grupo Muscular não se aplica a dietas
-        "", // Nível não se aplica a dietas
-        item.Objetivo,
-        "#", // Link placeholder - substituir por um link real
-        item.Refeicoes // Passa o array de refeições
-      );
-    }
+    resultadosHTML += criarElementoResultado(
+      item.Titulo,
+      item.Descricao,
+      item.GrupoMuscular,
+      item.Nivel,
+      "", // Objetivo não se aplica a treinos
+      "#", // Link placeholder - substituir por um link real
+      item.Exercicios // Passa o array de exercícios
+    );
+  });
+
+  // Inserindo o HTML gerado na seção
+  document.getElementById("resultados").innerHTML = resultadosHTML;
+
+  // Adiciona evento de clique nos links "Mais informações"
+  const maisInformacoesLinks = document.querySelectorAll(".mais-informacoes");
+  maisInformacoesLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const titulo = e.target.getAttribute("data-titulo");
+      const conteudo = JSON.parse(e.target.getAttribute("data-conteudo")); // Converte de volta para objeto
+      abrirModal(titulo, conteudo);
+    });
+  });
+}
+
+function gerarResultadosDietas(resultados) {
+  let resultadosHTML = "";
+
+  resultados.forEach((item) => {
+    resultadosHTML += criarElementoResultado(
+      item.Titulo,
+      item.Descricao,
+      "", // Grupo Muscular não se aplica a dietas
+      "", // Nível não se aplica a dietas
+      item.Objetivo,
+      "#", // Link placeholder - substituir por um link real
+      item.Refeicoes // Passa o array de refeições
+    );
   });
 
   // Inserindo o HTML gerado na seção
@@ -83,52 +105,41 @@ function abrirModal(titulo, conteudo) {
         ? `<img  class="imagem"  src="${item.Link}" alt="${item.Nome}">`
         : ""
     } </div></strong> 
-            
                 <div class="texto">
                     ${
-                      item.Series
-                        ? `<p><strong>Series:</strong> ${item.Series}</p>`
-                        : ""
+                      item.Series &&
+                      `<p><strong>Series:</strong> ${item.Series}</p>`
                     }
                     ${
-                      item.Repeticoes
-                        ? `<p><strong>Repeticoes:</strong> ${item.Repeticoes}</p>`
-                        : ""
+                      item.Repeticoes &&
+                      `<p><strong>Repeticoes:</strong> ${item.Repeticoes}</p>`
                     }
                     ${
-                      item.Descanso
-                        ? `<p><strong>Descanso:</strong> ${item.Descanso}</p>`
-                        : ""
+                      item.Descanso &&
+                      `<p><strong>Descanso:</strong> ${item.Descanso}</p>`
                     }
                     ${
-                      item.Equipamento
-                        ? `<p><strong>Equipamento:</strong> ${item.Equipamento}</p>`
-                        : ""
+                      item.Equipamento &&
+                      `<p><strong>Equipamento:</strong> ${item.Equipamento}</p>`
                     }
 
-
                     ${
-                      item.Alimentos
-                        ? `<p><strong>Alimentos:</strong> ${item.Alimentos}</p>`
-                        : ""
+                      item.Alimentos &&
+                      `<p><strong>Alimentos:</strong> ${item.Alimentos}</p>`
                     }
                     ${
-                      item.Calorias
-                        ? `<p><strong>Calorias:</strong> ${item.Calorias}</p>`
-                        : ""
+                      item.Calorias &&
+                      `<p><strong>Calorias:</strong> ${item.Calorias}</p>`
                     }
                     ${
-                      item.Macros
-                        ? `<p><strong>Macros:</strong> 
+                      item.Macros &&
+                      `<p><strong>Macros:</strong> 
                         <strong>Carboidratos: </strong>${item.Macros.carboidratos}
                             <strong>Proteinas: </strong>${item.Macros.proteinas}
                             <strong>Gorduras: </strong>${item.Macros.gorduras}
                         </p>`
-                        : ""
                     }
                 </div>
-                
-            
             
         </div>
         `;
@@ -151,28 +162,29 @@ window.onclick = function (event) {
   }
 };
 
-function pesquisar() {
+function filtroTreinos() {
   const input = document.getElementById("searchInput").value.toLowerCase();
   let resultadosFiltrados = [];
+  resultadosFiltrados = treinos.filter(
+    (treino) =>
+      treino.Titulo.toLowerCase().includes(input) ||
+      treino.Descricao.toLowerCase().includes(input) ||
+      (treino.GrupoMuscular &&
+        treino.GrupoMuscular.toLowerCase().includes(input)) ||
+      (treino.Nivel && treino.Nivel.toLowerCase().includes(input))
+  );
+  gerarResultadosTreinos(resultadosFiltrados);
+}
 
-  // Verifica se estamos na página de treinos
-  if (window.location.pathname === "/NuTrainerAI/views/treinos.html") {
-    resultadosFiltrados = treinos.filter(
-      (treino) =>
-        treino.Titulo.toLowerCase().includes(input) ||
-        treino.Descricao.toLowerCase().includes(input) ||
-        (treino.GrupoMuscular &&
-          treino.GrupoMuscular.toLowerCase().includes(input)) ||
-        (treino.Nivel && treino.Nivel.toLowerCase().includes(input))
-    );
-  } else {
-    resultadosFiltrados = dietas.filter(
-      (dieta) =>
-        dieta.Titulo.toLowerCase().includes(input) ||
-        dieta.Descricao.toLowerCase().includes(input) ||
-        (dieta.Objetivo && dieta.Objetivo.toLowerCase().includes(input))
-    );
-  }
+function filtroDietas() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  let resultadosFiltrados = [];
+  resultadosFiltrados = dietas.filter(
+    (dieta) =>
+      dieta.Titulo.toLowerCase().includes(input) ||
+      dieta.Descricao.toLowerCase().includes(input) ||
+      (dieta.Objetivo && dieta.Objetivo.toLowerCase().includes(input))
+  );
 
-  gerarResultados(resultadosFiltrados);
+  gerarResultadosDietas(resultadosFiltrados);
 }
